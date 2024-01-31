@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */; };
+		2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */; };
 		2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */; };
 		2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9F2B31BF1200121DBC /* ContentView.swift */; };
 		2EB63BA22B31BF1500121DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB63BA12B31BF1500121DBC /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView2.swift; sourceTree = "<group>"; };
+		2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView3.swift; sourceTree = "<group>"; };
 		2EB63B9A2B31BF1200121DBC /* testTaskJuniorDevSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTaskJuniorDevSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTaskJuniorDevSwiftApp.swift; sourceTree = "<group>"; };
 		2EB63B9F2B31BF1200121DBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				2EB63B9F2B31BF1200121DBC /* ContentView.swift */,
 				2EBB6C6D2B691C4E004796B2 /* SplashView.swift */,
 				2EBB6C712B692070004796B2 /* OnboardingView.swift */,
+				2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */,
+				2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */,
 				2EB63BA12B31BF1500121DBC /* Assets.xcassets */,
 				2EB63BA32B31BF1500121DBC /* Preview Content */,
 			);
@@ -146,7 +152,9 @@
 				2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */,
 				2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */,
 				2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */,
+				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
 				2EBB6C6E2B691C4E004796B2 /* SplashView.swift in Sources */,
+				2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
