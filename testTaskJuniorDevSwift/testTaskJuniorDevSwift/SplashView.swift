@@ -12,32 +12,41 @@ struct SplashView: View {
     @State private var isActive = false
     @State private var opacity = 0.5
     @State private var size = 0.8
+    @State private var isOnboardingCompleted: Bool = false
 
     var body: some View {
-        if isActive {
-            OnboardingView()
-        } else {
-            VStack {
-                VStack {
-                    Image("splashIcon")
+        NavigationView {
+            if isActive {
+                if isOnboardingCompleted {
+                    OnboardingView3()
+                } else {
+                    OnboardingView()
+                        .navigationBarHidden(true)
                 }
-                .scaleEffect(size)
-                .opacity(opacity)
-                .onAppear() {
-                    withAnimation(.easeIn(duration: 1.2)) {
-                        self.size = 1
-                        self.opacity = 1.0
+            } else {
+                VStack {
+                    VStack {
+                        Image("splashIcon")
+                    }
+                    .scaleEffect(size)
+                    .opacity(opacity)
+                    .onAppear() {
+                        withAnimation(.easeIn(duration: 1.2)) {
+                            self.size = 1
+                            self.opacity = 1.0
+                        }
                     }
                 }
-            }
-            .onAppear() {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { 
-                    withAnimation() {
-                        self.isActive = true
+                .onAppear() {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        withAnimation() {
+                            self.isActive = true
+                        }
                     }
                 }
             }
         }
+
     }
 }
 
