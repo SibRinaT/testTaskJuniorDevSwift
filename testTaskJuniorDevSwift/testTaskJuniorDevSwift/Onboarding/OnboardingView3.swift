@@ -7,9 +7,6 @@
 
 import SwiftUI
 struct OnboardingView3: View {
-    @State private var currentStep = 0
-    @State private var isOnboardingCompleted: Bool = true
-
     
     var body: some View {
         VStack {
@@ -29,10 +26,6 @@ struct OnboardingView3: View {
             NavigationLink(destination: CreateAccountView()) {
                 Text("Sign Up")
                     .frame(maxWidth: .infinity)
-            }
-            .onTapGesture {
-                UserDefaults.standard.set(true, forKey: "isOnboardingCompleted")
-                isOnboardingCompleted = true
             }
             .buttonStyle(LargeButtonStyle(backgroundColor: Color("MainColor"), foregroundColor: .white, isDisabled: false))
         }

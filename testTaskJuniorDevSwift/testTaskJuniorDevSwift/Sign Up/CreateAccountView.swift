@@ -47,6 +47,9 @@ struct CreateAccountView: View {
                         viewModel.load()
                     }
                 }
+                .onAppear() {
+                    UserDefaults.standard.set(true, forKey: "isOnboardingCompleted")
+                }
             }
             .padding()
             .navigationBarHidden(true)

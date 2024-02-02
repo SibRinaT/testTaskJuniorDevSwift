@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct OnboardingView2: View {
-//    @State private var isOnboardingCompleted: Bool = false
+    
     var body: some View {
         VStack {
             VStack {
