@@ -22,7 +22,12 @@
 		2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB6C712B692070004796B2 /* OnboardingView.swift */; };
 		2EC6B33B2B6B6F4E00C98421 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */; };
 		2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */; };
-		AC0C0E472B6CBF760075A057 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C0E462B6CBF760075A057 /* OTPView.swift */; };
+		AC0C0E472B6CBF760075A057 /* OTPView15.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C0E462B6CBF760075A057 /* OTPView15.swift */; };
+		AC7411D52B6CE889000D7AE4 /* OTPView14.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411D42B6CE889000D7AE4 /* OTPView14.swift */; };
+		AC7411D72B6CE8B0000D7AE4 /* OTPModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411D62B6CE8B0000D7AE4 /* OTPModifier.swift */; };
+		AC7411DA2B6CECA8000D7AE4 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411D92B6CECA8000D7AE4 /* Types.swift */; };
+		AC7411DC2B6CECC0000D7AE4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411DB2B6CECC0000D7AE4 /* User.swift */; };
+		AC7411DE2B6CECFE000D7AE4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411DD2B6CECFE000D7AE4 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +47,12 @@
 		2EBB6C712B692070004796B2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationOTPView.swift; sourceTree = "<group>"; };
-		AC0C0E462B6CBF760075A057 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		AC0C0E462B6CBF760075A057 /* OTPView15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView15.swift; sourceTree = "<group>"; };
+		AC7411D42B6CE889000D7AE4 /* OTPView14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView14.swift; sourceTree = "<group>"; };
+		AC7411D62B6CE8B0000D7AE4 /* OTPModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModifier.swift; sourceTree = "<group>"; };
+		AC7411D92B6CECA8000D7AE4 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		AC7411DB2B6CECC0000D7AE4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC7411DD2B6CECFE000D7AE4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +91,7 @@
 				2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */,
 				2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */,
 				2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */,
-				AC0C0E462B6CBF760075A057 /* OTPView.swift */,
+				AC7411D32B6CE879000D7AE4 /* OTPView */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -105,6 +115,7 @@
 		2EB63B9C2B31BF1200121DBC /* testTaskJuniorDevSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AC7411D82B6CEC9B000D7AE4 /* Models */,
 				2E7618522B6B6349004F3219 /* Sign Up */,
 				2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */,
 				2EB63B9F2B31BF1200121DBC /* ContentView.swift */,
@@ -125,6 +136,26 @@
 				2EB63BA42B31BF1500121DBC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC7411D32B6CE879000D7AE4 /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				AC0C0E462B6CBF760075A057 /* OTPView15.swift */,
+				AC7411D42B6CE889000D7AE4 /* OTPView14.swift */,
+				AC7411D62B6CE8B0000D7AE4 /* OTPModifier.swift */,
+			);
+			path = OTPView;
+			sourceTree = "<group>";
+		};
+		AC7411D82B6CEC9B000D7AE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC7411DD2B6CECFE000D7AE4 /* Loader.swift */,
+				AC7411D92B6CECA8000D7AE4 /* Types.swift */,
+				AC7411DB2B6CECC0000D7AE4 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,19 +228,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0C0E472B6CBF760075A057 /* OTPView.swift in Sources */,
+				AC0C0E472B6CBF760075A057 /* OTPView15.swift in Sources */,
 				2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */,
 				2E76184E2B6B5C95004F3219 /* LargeButtonStyle.swift in Sources */,
+				AC7411DA2B6CECA8000D7AE4 /* Types.swift in Sources */,
 				2E7618542B6B63F8004F3219 /* LogInView.swift in Sources */,
 				2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */,
 				2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */,
+				AC7411DE2B6CECFE000D7AE4 /* Loader.swift in Sources */,
 				2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */,
 				2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */,
 				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
 				2EBB6C6E2B691C4E004796B2 /* SplashView.swift in Sources */,
 				2E76184C2B6B5C93004F3219 /* InputFieldView.swift in Sources */,
+				AC7411D52B6CE889000D7AE4 /* OTPView14.swift in Sources */,
 				2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */,
+				AC7411DC2B6CECC0000D7AE4 /* User.swift in Sources */,
 				2EC6B33B2B6B6F4E00C98421 /* ForgotPasswordView.swift in Sources */,
+				AC7411D72B6CE8B0000D7AE4 /* OTPModifier.swift in Sources */,
 				2E7618512B6B5E86004F3219 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

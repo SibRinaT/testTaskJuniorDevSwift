@@ -1,54 +1,4 @@
 import SwiftUI
-import Combine
-
-struct OtpModifer: ViewModifier {
-    @Binding var pin : String
-    
-    func limitText() {
-        if pin.count > 1 {
-            self.pin = String(pin.suffix(1))
-        }
-    }
-        
-    func body(content: Content) -> some View {
-        content
-            .multilineTextAlignment(.center)
-            .keyboardType(.numberPad)
-            .onReceive(Just(pin)) {_ in limitText()}
-            .frame(width: 32, height: 32)
-            .background(Color.white)
-            .background(
-                Rectangle()
-                    .stroke(Color.gray, lineWidth: 2)
-            )
-    }
-}
-
-struct OTPViewiOS14: View {
-    @State var pinOne: String = ""
-    @State var pinTwo: String = ""
-    @State var pinThree: String = ""
-    @State var pinFour: String = ""
-    @State var pinFive: String = ""
-    @State var pinSix: String = ""
-    
-    var body: some View {
-        HStack(spacing: 30, content: {
-                TextField("", text: $pinOne)
-                    .modifier(OtpModifer(pin:$pinOne))
-                TextField("", text:  $pinTwo)
-                    .modifier(OtpModifer(pin:$pinTwo))
-                TextField("", text:$pinThree)
-                    .modifier(OtpModifer(pin:$pinThree))
-                TextField("", text:$pinFour)
-                    .modifier(OtpModifer(pin:$pinFour))
-                TextField("", text:$pinFive)
-                    .modifier(OtpModifer(pin:$pinFive))
-                TextField("", text:$pinSix)
-                    .modifier(OtpModifer(pin:$pinSix))
-        })
-    }
-}
 
 @available(iOS 15.0, *)
 struct OTPViewiOS15: View {
@@ -63,15 +13,18 @@ struct OTPViewiOS15: View {
     @State var pinFour: String = ""
     @State var pinFive: String = ""
     @State var pinSix: String = ""
+    
+    var completionHandler: ((String) -> ())?
         
     var body: some View {
         HStack(spacing: 30, content: {
                 TextField("", text: $pinOne)
                     .modifier(OtpModifer(pin:$pinOne))
-                    .onChange(of:pinOne){newVal in
+                    .onChange(of:pinOne) { newVal in
                         if (newVal.count == 1) {
                             pinFocusState = .pinTwo
                         }
+                        sendPin()
                     }
                     .focused($pinFocusState, equals: .pinOne)
                 
@@ -85,6 +38,7 @@ struct OTPViewiOS15: View {
                                 pinFocusState = .pinOne
                             }
                         }
+                        sendPin()
                     }
                     .focused($pinFocusState, equals: .pinTwo)
                 
@@ -98,6 +52,7 @@ struct OTPViewiOS15: View {
                                 pinFocusState = .pinTwo
                             }
                         }
+                        sendPin()
                     }
                     .focused($pinFocusState, equals: .pinThree)
 
@@ -111,6 +66,7 @@ struct OTPViewiOS15: View {
                                 pinFocusState = .pinThree
                             }
                         }
+                        sendPin()
                     }
                     .focused($pinFocusState, equals: .pinFour)
                 
@@ -124,6 +80,7 @@ struct OTPViewiOS15: View {
                                 pinFocusState = .pinFour
                             }
                         }
+                        sendPin()
                     }
                     .focused($pinFocusState, equals: .pinFive)
                 
@@ -133,18 +90,22 @@ struct OTPViewiOS15: View {
                         if (newVal.count == 0) {
                             pinFocusState = .pinFive
                         }
+                        sendPin()
                     }
                     .focused($pinFocusState, equals: .pinSix)
         })
     }
+    
+    func sendPin() {
+        let pin = [pinOne, pinTwo, pinThree, pinFour, pinFive, pinSix].joined()
+        completionHandler?(pin)
+    }
 }
 
-struct OtpFormFieldView_Previews: PreviewProvider {
+struct OtpFormField15View_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 15.0, *) {
             OTPViewiOS15()
-        } else {
-            OTPViewiOS14()
         }
     }
 }
