@@ -22,6 +22,7 @@
 		2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB6C712B692070004796B2 /* OnboardingView.swift */; };
 		2EC6B33B2B6B6F4E00C98421 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */; };
 		2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */; };
+		AC0C0E472B6CBF760075A057 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C0E462B6CBF760075A057 /* OTPView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2EBB6C712B692070004796B2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationOTPView.swift; sourceTree = "<group>"; };
+		AC0C0E462B6CBF760075A057 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */,
 				2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */,
 				2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */,
+				AC0C0E462B6CBF760075A057 /* OTPView.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0C0E472B6CBF760075A057 /* OTPView.swift in Sources */,
 				2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */,
 				2E76184E2B6B5C95004F3219 /* LargeButtonStyle.swift in Sources */,
 				2E7618542B6B63F8004F3219 /* LogInView.swift in Sources */,

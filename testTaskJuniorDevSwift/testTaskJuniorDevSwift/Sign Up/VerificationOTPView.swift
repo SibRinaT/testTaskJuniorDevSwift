@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VerificationOTPView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             VStack(alignment: .leading) {
                 Text("OTP Verification")
                     .font(.title)
@@ -20,15 +20,23 @@ struct VerificationOTPView: View {
                     .foregroundColor(.gray)
                     .padding(.bottom, 40)
             }
-            VStack (alignment: .center) {
+            VStack (alignment: .leading) {
                 HStack {
-                    Text("If you didn’t receive code, ")
-                        .foregroundColor(Color("gray2"))
+                    
                     NavigationLink(destination: ForgotPasswordView()) {
-                        Text("resend")
-                            .bold()
-                            .frame(maxWidth: 100)
-                            .foregroundColor(Color("MainColor"))
+                        Group {
+                            Text("If you didn’t receive code, ")
+                                .font(.subheadline)
+                                .foregroundColor(Color.gray)
+                            
+                            + Text("resend")
+                                .font(.subheadline)
+                                .foregroundColor(Color(.systemBlue))
+                        }
+                        .multilineTextAlignment(.leading)
+                        
+                        
+                        
                     }
                 }
             }
@@ -38,9 +46,12 @@ struct VerificationOTPView: View {
                 print("Hello World")
             }
         }
+        .padding()
     }
 }
 
 #Preview {
-    VerificationOTPView()
+    NavigationView {
+        VerificationOTPView()
+    }
 }
