@@ -33,7 +33,6 @@ struct CreateAccountView: View {
                             foregroundColor: Color.white) {
                     print("Hello World")
                 }
-                
             }
         }
         .padding()
