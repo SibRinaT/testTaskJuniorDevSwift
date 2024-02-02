@@ -46,7 +46,7 @@ struct CreateAccountView: View {
                     }
                 }
                 .onAppear() {
-                    UserDefaults.standard.set(true, forKey: "isOnboardingCompleted")
+                    Utils.saveTrueFor(key: .onboarding)
                 }
             }
             .padding()
@@ -54,8 +54,10 @@ struct CreateAccountView: View {
         case .loading:
             ProgressView()
         case .failed(let error):
-            Spacer()
-        case .loaded(let value):
+            LoadingErrorView(error: error) {
+                viewModel.load()
+            }
+        case .loaded(let user):
             Spacer()
         }
         
@@ -85,7 +87,13 @@ class CreateAccountViewModel: ObservableObject, LoadableObject {
                 let result = try await loader.signUp(user: userRequest)
                 switch result {
                 case .success(let user):
-                    print("success")
+                    
+                    let encoder = JSONEncoder()
+                    if let encoded = try? encoder.encode(user) {
+                        let defaults = UserDefaults.standard
+                        defaults.set(encoded, forKey: "SavedUser")
+                    }
+                    
                     state = .loaded(user)
                 case .failure(let error):
                     print("error")

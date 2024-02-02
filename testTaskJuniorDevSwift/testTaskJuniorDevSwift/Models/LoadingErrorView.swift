@@ -7,7 +7,7 @@ struct LoadingErrorView: View {
     var body: some View {
         VStack(alignment: .center) {
             Spacer()
-            Text("Something went wrong")
+            Text(error.localizedDescription)
             Button("Load again") {
                 retryHandler()
             }

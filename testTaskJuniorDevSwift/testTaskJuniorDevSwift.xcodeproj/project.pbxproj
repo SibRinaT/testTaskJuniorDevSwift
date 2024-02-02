@@ -31,6 +31,7 @@
 		AC7411DE2B6CECFE000D7AE4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411DD2B6CECFE000D7AE4 /* Loader.swift */; };
 		AC7411E02B6CF6A0000D7AE4 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411DF2B6CF6A0000D7AE4 /* AsyncContentView.swift */; };
 		AC7411E22B6CF6BE000D7AE4 /* LoadingErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E12B6CF6BE000D7AE4 /* LoadingErrorView.swift */; };
+		AC7411E52B6D0C17000D7AE4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E42B6D0C17000D7AE4 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		AC7411DD2B6CECFE000D7AE4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		AC7411DF2B6CF6A0000D7AE4 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
 		AC7411E12B6CF6BE000D7AE4 /* LoadingErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingErrorView.swift; sourceTree = "<group>"; };
+		AC7411E42B6D0C17000D7AE4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		2EB63B9C2B31BF1200121DBC /* testTaskJuniorDevSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AC7411E32B6D0C0C000D7AE4 /* Utils */,
 				AC7411D82B6CEC9B000D7AE4 /* Models */,
 				2E7618522B6B6349004F3219 /* Sign Up */,
 				2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */,
@@ -165,6 +168,14 @@
 				AC7411E12B6CF6BE000D7AE4 /* LoadingErrorView.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AC7411E32B6D0C0C000D7AE4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC7411E42B6D0C17000D7AE4 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
 				2EBB6C6E2B691C4E004796B2 /* SplashView.swift in Sources */,
 				2E76184C2B6B5C93004F3219 /* InputFieldView.swift in Sources */,
+				AC7411E52B6D0C17000D7AE4 /* Utils.swift in Sources */,
 				AC7411D52B6CE889000D7AE4 /* OTPView14.swift in Sources */,
 				2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */,
 				AC7411E22B6CF6BE000D7AE4 /* LoadingErrorView.swift in Sources */,
