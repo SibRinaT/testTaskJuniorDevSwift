@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct SplashView: View {
-    
     @State private var isActive = false
     @State private var opacity = 0.5
     @State private var size = 0.8
-    @State private var isOnboardingCompleted: Bool = false
 
     var body: some View {
         NavigationView {
             if isActive {
-                if UserDefaults.standard.bool(forKey: "isOnboardingCompleted") {
+                if let user: User = Utils.getModelFor(key: .user) {
+                    TabBarView()
+                } else if Utils.getBoolFor(key: .onboarding) {
                     CreateAccountView()
                 } else {
                     OnboardingView()

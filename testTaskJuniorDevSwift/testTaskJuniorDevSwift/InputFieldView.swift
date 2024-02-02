@@ -11,7 +11,7 @@ struct InputFieldView: View {
     let title: String
     let placeholder: String
     @State var isSecured = false
-    @State var fieldValue: String
+    @Binding var fieldValue: String
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -45,5 +45,11 @@ struct InputFieldView: View {
 }
 
 #Preview {
-    InputFieldView(title: "Full name", placeholder: "Ivanov Ivan", isSecured: true, fieldValue: "")
+    InputFieldView(title: "Full name",
+                   placeholder: "Ivanov Ivan",
+                   isSecured: true,
+                   fieldValue:  Binding(
+                    get: { "" },
+                    set: { _ in }
+                ))
 }

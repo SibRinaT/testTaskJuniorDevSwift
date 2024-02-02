@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LogInView: View {
+    @State var email = ""
+    @State var password = ""
+    
     var body: some View {
         VStack (alignment: .leading) {
             Text("Welcome back")
@@ -16,13 +19,14 @@ struct LogInView: View {
                 .foregroundColor(Color("gray2"))
                 .font(.callout)
             
-            InputFieldView(title: "Email address", placeholder: "*****@gmail.com", fieldValue: "")
-            InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: "")
+            InputFieldView(title: "Email address", placeholder: "*****@gmail.com", fieldValue: $email)
+            InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: $password)
             
             HStack {
                 Text("Remember password")
                     .foregroundColor(Color("gray2"))
                     .font(.callout)
+                Spacer()
                 NavigationLink(destination: ForgotPasswordView()) {
                     Text("Forgot Password?")
                         .font(.caption2)
@@ -36,23 +40,33 @@ struct LogInView: View {
                         foregroundColor: Color.white) {
                 print("Hello World")
             }
-        }
-        HStack {
-            Text("Already have an account?")
-                .foregroundColor(Color("gray2"))
-            NavigationLink(destination: ForgotPasswordView()) {
-                Text("Next")
-                    .bold()
-                    .frame(maxWidth: 100)
-                    .foregroundColor(Color("MainColor"))
+            
+            VStack {
+                NavigationLink(destination: CreateAccountView()) {
+                    Group {
+                        Text("Don't have an account? ")
+                            .foregroundColor(Color("gray2"))
+                        + Text("Sign Up")
+                            .foregroundColor(Color(.orange))
+                    }
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+                }
+                .padding(.bottom, 10)
+                Text("or log in using")
+                        .foregroundColor(Color("gray2"))
+                Image("Vector")
             }
+            .frame(maxWidth: .infinity, alignment: .center)
+
         }
-        Text("or log in using")
-                .foregroundColor(Color("gray2"))
-        Image("Vector")
+        .navigationBarHidden(true)
+        .padding()
     }
 }
 
 #Preview {
-    LogInView()
+    NavigationView {
+        LogInView()
+    }
 }

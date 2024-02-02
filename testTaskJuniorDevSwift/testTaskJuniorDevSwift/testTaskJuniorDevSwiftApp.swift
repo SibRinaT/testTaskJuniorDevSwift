@@ -11,13 +11,6 @@ import SwiftUI
 struct testTaskJuniorDevSwiftApp: App {
     var body: some Scene {
         WindowGroup {
-//            if #available(iOS 15.0, *) {
-//                OTPViewiOS15() { pin in
-//                    print(pin)
-//                }
-//            } else {
-//                OTPViewiOS14()
-//            }
             SplashView()
         }
     }

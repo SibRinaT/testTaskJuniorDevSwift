@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct CreateAccountView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var viewModel = CreateAccountViewModel()
     @State var name = ""
     @State var phone = ""
     @State var email = ""
     @State var password = ""
+    @State var confirmPassword = ""
+    @State var isAgreeWithTerms = false
     
     var body: some View {
         switch viewModel.state {
         case .idle:
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
-                    //                VStack(alignment: .leading) {
                     Text("Create an account")
                         .font(.title)
                         .padding(.bottom, 5)
@@ -27,48 +29,82 @@ struct CreateAccountView: View {
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .padding(.bottom, 40)
-                    //                }
+                    
+                    InputFieldView(title: "Full name", placeholder: "Ivanov Ivan", fieldValue: $name)
+                    InputFieldView(title: "Phone number", placeholder: "+7(999)999-99-99", fieldValue: $phone)
+                    InputFieldView(title: "Email adress", placeholder: "******@gmail.com", fieldValue: $email)
+                    InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: $password)
+                    InputFieldView(title: "Confirm Password", placeholder: "******", isSecured: true, fieldValue: $confirmPassword)
                     
                     
-                    InputFieldView(title: "Full name", placeholder: "Ivanov Ivan", fieldValue: name)
-                    InputFieldView(title: "Phone number", placeholder: "+7(999)999-99-99", fieldValue: "")
-                    InputFieldView(title: "Email adress", placeholder: "******@gmail.com", fieldValue: "")
-                    InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: "")
-                    InputFieldView(title: "Confirm Password", placeholder: "******", isSecured: true, fieldValue: "")
+                    HStack {
+                        CheckBoxView(checked: $isAgreeWithTerms)
+                            .padding(.trailing, 10)
+                        NavigationLink(destination: TermsAndConditionsView()) {
+                            Group {
+                                Text("By ticking this box, you agree to our ")
+                                    .foregroundColor(Color.gray)
+                                + Text("Terms and conditions and private policy")
+                                    .foregroundColor(Color(.orange))
+                            }
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                        }
+                    }
+                    .padding(.bottom, 40)
+                     
                     
+                    let disabled = !isAgreeWithTerms || name.isEmpty || email.isEmpty || phone.isEmpty || password.isEmpty || confirmPassword.isEmpty || password != confirmPassword
                     LargeButton(title: "Sign Up",
+                                disabled: disabled,
                                 backgroundColor: Color.blue,
                                 foregroundColor: Color.white) {
-                        print(name)
-                        viewModel.userRequest = SignUpUserRequest(name: name,
-                                                                  phone: phone,
+                        viewModel.userRequest = SignUpUserRequest(first_name: name,
+                                                                  phone_number: phone,
                                                                   email: email,
                                                                   password: password)
                         viewModel.load()
                     }
+                    
+                    VStack() {
+                        NavigationLink(destination: LogInView()) {
+                            Group {
+                                Text("Already have an account? ")
+                                    .foregroundColor(Color.gray)
+                                + Text("Sign In")
+                                    .foregroundColor(Color(.blue))
+                            }
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+
                 }
                 .onAppear() {
-                    UserDefaults.standard.set(true, forKey: "isOnboardingCompleted")
+                    Utils.saveTrueFor(key: .onboarding)
                 }
             }
             .padding()
             .navigationBarHidden(true)
         case .loading:
-            Spacer()
+            ProgressView()
         case .failed(let error):
-            Spacer()
-        case .loaded(let value):
-            Spacer()
+            LoadingErrorView(error: error) {
+                viewModel.load()
+            } closeHandler: {
+                viewModel.state = .idle
+            }
+        case .loaded(let user):
+            TabBarView()
         }
-        
     }
 }
 
-
 class CreateAccountViewModel: ObservableObject, LoadableObject {
-    typealias Output = [User]
+    typealias Output = User
         
-    @Published private(set) var state: LoadingState<[User]>
+    @Published var state: LoadingState<User>
     @MainActor private let loader = Loader()
     var userRequest: SignUpUserRequest?
     
@@ -81,15 +117,19 @@ class CreateAccountViewModel: ObservableObject, LoadableObject {
             return
         }
         state = .loading
-        
-        loader.signUp(user: userRequest) { [weak self] result in
-            switch result {
-            case .success(let user):
-                print("success")
-                self?.state = .loaded(user)
-            case .failure(let error):
-                print("error")
-                self?.state = .failed(error)
+        Task {
+            do {
+                let result = try await loader.signUp(user: userRequest)
+                switch result {
+                case .success(let user):
+                    Utils.save(model: user, key: .user)
+                    state = .loaded(user)
+                case .failure(let error):
+                    print("error")
+                    state = .failed(error)
+                }
+            } catch {
+                print(error)
             }
         }
     }
