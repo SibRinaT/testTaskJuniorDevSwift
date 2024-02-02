@@ -19,7 +19,7 @@ struct RectangleProfileView: View {
             .shadow(radius: 3, x: 0, y: 2)
             .overlay (
                 HStack{
-                    Image("notification")
+                    Image(image)
                     VStack (alignment:.leading) {
                         Text(title)
                             .bold()
