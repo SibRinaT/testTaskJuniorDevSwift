@@ -14,6 +14,7 @@ struct CreateAccountView: View {
     @State var email = ""
     @State var password = ""
     @State var confirmPassword = ""
+    @State var isAgreeWithTerms = false
     
     var body: some View {
         switch viewModel.state {
@@ -33,7 +34,26 @@ struct CreateAccountView: View {
                     InputFieldView(title: "Email adress", placeholder: "******@gmail.com", fieldValue: $email)
                     InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: $password)
                     InputFieldView(title: "Confirm Password", placeholder: "******", isSecured: true, fieldValue: $confirmPassword)
-                    let disabled = name.isEmpty || email.isEmpty || phone.isEmpty || password.isEmpty || confirmPassword.isEmpty || password != confirmPassword
+                    
+                    
+                    HStack {
+                        CheckBoxView(checked: $isAgreeWithTerms)
+                            .padding(.trailing, 10)
+                        NavigationLink(destination: TermsAndConditionsView()) {
+                            Group {
+                                Text("By ticking this box, you agree to our ")
+                                    .foregroundColor(Color.gray)
+                                + Text("Terms and conditions and private policy")
+                                    .foregroundColor(Color(.orange))
+                            }
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                        }
+                    }
+                    .padding(.bottom, 40)
+                     
+                    
+                    let disabled = !isAgreeWithTerms || name.isEmpty || email.isEmpty || phone.isEmpty || password.isEmpty || confirmPassword.isEmpty || password != confirmPassword
                     LargeButton(title: "Sign Up",
                                 disabled: disabled,
                                 backgroundColor: Color.blue,
@@ -44,6 +64,21 @@ struct CreateAccountView: View {
                                                                   password: password)
                         viewModel.load()
                     }
+                    
+                    VStack() {
+                        NavigationLink(destination: LogInView()) {
+                            Group {
+                                Text("Already have an account? ")
+                                    .foregroundColor(Color.gray)
+                                + Text("Sign In")
+                                    .foregroundColor(Color(.blue))
+                            }
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+
                 }
                 .onAppear() {
                     Utils.saveTrueFor(key: .onboarding)
@@ -58,12 +93,11 @@ struct CreateAccountView: View {
                 viewModel.load()
             }
         case .loaded(let user):
-            Spacer()
+            TabBarView()
         }
         
     }
 }
-
 
 class CreateAccountViewModel: ObservableObject, LoadableObject {
     typealias Output = User

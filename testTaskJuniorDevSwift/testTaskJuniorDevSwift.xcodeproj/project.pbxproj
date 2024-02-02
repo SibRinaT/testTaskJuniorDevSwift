@@ -32,6 +32,8 @@
 		AC7411E02B6CF6A0000D7AE4 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411DF2B6CF6A0000D7AE4 /* AsyncContentView.swift */; };
 		AC7411E22B6CF6BE000D7AE4 /* LoadingErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E12B6CF6BE000D7AE4 /* LoadingErrorView.swift */; };
 		AC7411E52B6D0C17000D7AE4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E42B6D0C17000D7AE4 /* Utils.swift */; };
+		AC7411E72B6D192B000D7AE4 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E62B6D192B000D7AE4 /* CheckBox.swift */; };
+		AC7411E92B6D1AFD000D7AE4 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E82B6D1AFD000D7AE4 /* TermsAndConditionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		AC7411DF2B6CF6A0000D7AE4 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
 		AC7411E12B6CF6BE000D7AE4 /* LoadingErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingErrorView.swift; sourceTree = "<group>"; };
 		AC7411E42B6D0C17000D7AE4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AC7411E62B6D192B000D7AE4 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		AC7411E82B6D1AFD000D7AE4 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */,
 				2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */,
 				2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */,
+				AC7411E62B6D192B000D7AE4 /* CheckBox.swift */,
+				AC7411E82B6D1AFD000D7AE4 /* TermsAndConditionsView.swift */,
 				AC7411D32B6CE879000D7AE4 /* OTPView */,
 			);
 			path = "Sign Up";
@@ -261,6 +267,7 @@
 				2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */,
 				2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */,
 				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
+				AC7411E72B6D192B000D7AE4 /* CheckBox.swift in Sources */,
 				2EBB6C6E2B691C4E004796B2 /* SplashView.swift in Sources */,
 				2E76184C2B6B5C93004F3219 /* InputFieldView.swift in Sources */,
 				AC7411E52B6D0C17000D7AE4 /* Utils.swift in Sources */,
@@ -271,6 +278,7 @@
 				2EC6B33B2B6B6F4E00C98421 /* ForgotPasswordView.swift in Sources */,
 				AC7411D72B6CE8B0000D7AE4 /* OTPModifier.swift in Sources */,
 				2E7618512B6B5E86004F3219 /* TabBar.swift in Sources */,
+				AC7411E92B6D1AFD000D7AE4 /* TermsAndConditionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

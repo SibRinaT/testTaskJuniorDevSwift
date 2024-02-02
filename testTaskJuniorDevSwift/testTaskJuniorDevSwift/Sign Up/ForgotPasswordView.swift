@@ -12,33 +12,45 @@ struct ForgotPasswordView: View {
     
     var body: some View {
         VStack (alignment: .leading) {
+            Spacer()
             Text("Forgot Password")
                 .font(.title)
             Text("Enter your email address")
                 .foregroundColor(Color("gray2"))
                 .font(.callout)
+                .padding(.bottom, 80)
             InputFieldView(title: "Emaild Address", placeholder: "*****@gmail.com", fieldValue: $email)
             
             LargeButton(title: "Send OTP",
-                        backgroundColor: Color.gray,
+                        disabled: email.isEmpty,
+                        backgroundColor: Color.blue,
                         foregroundColor: Color.white) {
                 print("Hello World")
             }
-            HStack (alignment: .center)
-            {
-                Text("Remember password? Back to ")
-                    .foregroundColor(Color("gray2"))
+            VStack {
                 NavigationLink(destination: LogInView()) {
-                    Text("Sign in")
-                        .bold()
-                        .frame(maxWidth: 100)
-                        .foregroundColor(Color("MainColor"))
+                    Group {
+                        Text("Remember password? Back to ")
+                            .foregroundColor(Color("gray2"))
+                        +
+                        Text("Sign in")
+                            .foregroundColor(Color("MainColor"))
+                    }
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
                 }
             }
+            .frame(maxWidth: .infinity)
+            Spacer()
+            Spacer()
         }
+        .padding()
     }
 }
 
 #Preview {
-    ForgotPasswordView()
+    NavigationView {
+        ForgotPasswordView()
+    }
+    
 }

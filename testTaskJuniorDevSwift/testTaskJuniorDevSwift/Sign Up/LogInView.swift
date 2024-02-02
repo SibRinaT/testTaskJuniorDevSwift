@@ -26,6 +26,7 @@ struct LogInView: View {
                 Text("Remember password")
                     .foregroundColor(Color("gray2"))
                     .font(.callout)
+                Spacer()
                 NavigationLink(destination: ForgotPasswordView()) {
                     Text("Forgot Password?")
                         .font(.caption2)
@@ -39,23 +40,33 @@ struct LogInView: View {
                         foregroundColor: Color.white) {
                 print("Hello World")
             }
-        }
-        HStack {
-            Text("Already have an account?")
-                .foregroundColor(Color("gray2"))
-            NavigationLink(destination: ForgotPasswordView()) {
-                Text("Next")
-                    .bold()
-                    .frame(maxWidth: 100)
-                    .foregroundColor(Color("MainColor"))
+            
+            VStack {
+                NavigationLink(destination: CreateAccountView()) {
+                    Group {
+                        Text("Don't have an account? ")
+                            .foregroundColor(Color("gray2"))
+                        + Text("Sign Up")
+                            .foregroundColor(Color(.orange))
+                    }
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+                }
+                .padding(.bottom, 10)
+                Text("or log in using")
+                        .foregroundColor(Color("gray2"))
+                Image("Vector")
             }
+            .frame(maxWidth: .infinity, alignment: .center)
+
         }
-        Text("or log in using")
-                .foregroundColor(Color("gray2"))
-        Image("Vector")
+        .navigationBarHidden(true)
+        .padding()
     }
 }
 
 #Preview {
-    LogInView()
+    NavigationView {
+        LogInView()
+    }
 }
