@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @State var toggleSwich = false
     var body: some View {
         TabView {
             Text("Home")
@@ -38,9 +39,10 @@ struct TabBarView: View {
                                 .padding(.bottom, 30)
                         }
                     }
-                    
-                    
                 }
+                
+                Toggle("Enable dark Mode", isOn: $toggleSwich)
+                    .toggleStyle(.switch)
                 
                 RectangleProfileView(image: "profile", title: "Edit Profile", title2: "Name, phone no, address, email ...")
                 RectangleProfileView(image: "certif", title: "Statements & Reports", title2: "Download transaction details, orders, deliveries")
