@@ -33,11 +33,11 @@ struct CreateAccountView: View {
                     InputFieldView(title: "Email adress", placeholder: "******@gmail.com", fieldValue: $email)
                     InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: $password)
                     InputFieldView(title: "Confirm Password", placeholder: "******", isSecured: true, fieldValue: $confirmPassword)
-                    
+                    let disabled = name.isEmpty || email.isEmpty || phone.isEmpty || password.isEmpty || confirmPassword.isEmpty || password != confirmPassword
                     LargeButton(title: "Sign Up",
+                                disabled: disabled,
                                 backgroundColor: Color.blue,
                                 foregroundColor: Color.white) {
-                        print("name", name)
                         viewModel.userRequest = SignUpUserRequest(first_name: name,
                                                                   phone_number: phone,
                                                                   email: email,
