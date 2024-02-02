@@ -26,9 +26,12 @@ struct TabBarView: View {
                     Text("Track")
                 }
             Text("Profile")
+            
+            
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
+
                 }
         }
     }
