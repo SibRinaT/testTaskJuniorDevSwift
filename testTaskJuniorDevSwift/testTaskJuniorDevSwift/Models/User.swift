@@ -14,6 +14,11 @@ struct SignUpUserRequest: Codable {
     var password: String
 }
 
+struct SignInUserRequest: Codable {
+    var email: String
+    var password: String
+}
+
 struct User: Codable {
     var first_name: String
     var phone: String?

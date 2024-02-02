@@ -2,16 +2,20 @@ import Foundation
 
 @MainActor
 struct Loader {
-    let url = "http://127.0.0.1:5000/register"
+    let url = URL(string: "http://127.0.0.1:5000")!
     let acceptableStatusCodes = [200, 201]
     
     func signUp(user: SignUpUserRequest) async throws -> Result<User, CustomError> {
-        return try await performRequest(with: user)
+        return try await performRequest(with: user, path: "register")
     }
     
-    func performRequest<T>(with model: Codable) async throws -> Result<T, CustomError> where T: Codable {
+    func signIn(user: SignInUserRequest) async throws -> Result<User, CustomError> {
+        return try await performRequest(with: user, path: "login")
+    }
+    
+    private func performRequest<T>(with model: Codable, path: String) async throws -> Result<T, CustomError> where T: Codable {
         
-        var request = URLRequest(url: URL(string: url)!)
+        var request = URLRequest(url: url.appendingPathComponent(path))
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpBody = try JSONEncoder().encode(model)

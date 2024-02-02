@@ -100,9 +100,9 @@
 		2E7618522B6B6349004F3219 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
+				2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */,
 				2E7618532B6B63F8004F3219 /* LogInView.swift */,
 				2EC6B33A2B6B6F4E00C98421 /* ForgotPasswordView.swift */,
-				2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */,
 				2EC6B33C2B6B81E400C98421 /* VerificationOTPView.swift */,
 				AC7411E62B6D192B000D7AE4 /* CheckBox.swift */,
 				AC7411E82B6D1AFD000D7AE4 /* TermsAndConditionsView.swift */,

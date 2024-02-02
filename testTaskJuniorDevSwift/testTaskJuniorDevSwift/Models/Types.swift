@@ -1,12 +1,21 @@
-enum CustomError: Error {
+enum CustomError: Error, CustomStringConvertible {
     case noInternet
     case serverError(String?)
+    
+    var description: String {
+        switch self {
+        case .noInternet:
+            return "No internet connection"
+        case .serverError(let string):
+            return string ?? "Server error"
+        }
+    }
 }
 
 enum LoadingState<Value> {
     case idle
     case loading
-    case failed(Error)
+    case failed(CustomError)
     case loaded(Value)
 }
 

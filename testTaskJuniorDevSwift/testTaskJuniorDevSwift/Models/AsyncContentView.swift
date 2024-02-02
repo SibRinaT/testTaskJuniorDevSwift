@@ -18,7 +18,7 @@ struct AsyncContentView<Source: LoadableObject, Content: View>: View {
         case .loading:
             ProgressView()
         case .failed(let error):
-            LoadingErrorView(error: error, retryHandler: source.load)
+            LoadingErrorView(error: error, retryHandler: source.load, closeHandler: {})
         case .loaded(let output):
             content(output)
         }

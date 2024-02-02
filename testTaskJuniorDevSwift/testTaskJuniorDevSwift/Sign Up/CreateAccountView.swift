@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreateAccountView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var viewModel = CreateAccountViewModel()
     @State var name = ""
     @State var phone = ""
@@ -91,18 +92,19 @@ struct CreateAccountView: View {
         case .failed(let error):
             LoadingErrorView(error: error) {
                 viewModel.load()
+            } closeHandler: {
+                viewModel.state = .idle
             }
         case .loaded(let user):
             TabBarView()
         }
-        
     }
 }
 
 class CreateAccountViewModel: ObservableObject, LoadableObject {
     typealias Output = User
         
-    @Published private(set) var state: LoadingState<User>
+    @Published var state: LoadingState<User>
     @MainActor private let loader = Loader()
     var userRequest: SignUpUserRequest?
     
@@ -115,19 +117,12 @@ class CreateAccountViewModel: ObservableObject, LoadableObject {
             return
         }
         state = .loading
-        
         Task {
             do {
                 let result = try await loader.signUp(user: userRequest)
                 switch result {
                 case .success(let user):
-                    
-                    let encoder = JSONEncoder()
-                    if let encoded = try? encoder.encode(user) {
-                        let defaults = UserDefaults.standard
-                        defaults.set(encoded, forKey: "SavedUser")
-                    }
-                    
+                    Utils.save(model: user, key: .user)
                     state = .loaded(user)
                 case .failure(let error):
                     print("error")
@@ -137,8 +132,6 @@ class CreateAccountViewModel: ObservableObject, LoadableObject {
                 print(error)
             }
         }
-
-
     }
 }
 
