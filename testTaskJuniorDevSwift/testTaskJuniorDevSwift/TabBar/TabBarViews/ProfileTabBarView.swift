@@ -1,31 +1,17 @@
 //
-//  TabBarView.swift
+//  ProfileTabBar.swift
 //  testTaskJuniorDevSwift
 //
-//  Created by Ainur on 31.01.2024.
+//  Created by Ainur on 02.02.2024.
 //
 
 import SwiftUI
 
-struct TabBarView: View {
+struct ProfileTabBarView: View {
     @State var toggleSwich = false
+    
     var body: some View {
         TabView {
-            Text("Home")
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-            }
-            Text("Wallet")
-                .tabItem {
-                    Image(systemName: "wallet.pass")
-                    Text("Wallet")
-                }
-            Text("Track")
-                .tabItem {
-                    Image(systemName: "car")
-                    Text("Track")
-                }
             VStack {
                 HStack {
                     Image("KaneIcon")
@@ -50,19 +36,13 @@ struct TabBarView: View {
                 RectangleProfileView(image: "wallet", title: "Card & Bank account settings", title2: "mchange cards, delete card details")
                 RectangleProfileView(image: "twoPeople", title: "Referrals", title2: "check no of friends and earn")
                 RectangleProfileView(image: "mapCustom", title: "About Us", title2: "know more about us, terms and conditions")
-
-
             }
-           
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Profile")
-
-                }
+       
         }
     }
 }
 
+
 #Preview {
-    TabBarView()
+    ProfileTabBarView()
 }
