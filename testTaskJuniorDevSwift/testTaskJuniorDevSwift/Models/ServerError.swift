@@ -2,7 +2,7 @@
 //  ServerError.swift
 //  testTaskJuniorDevSwift
 //
-//  Created by Artem on 02.02.2024.
+//  Created by Ainur on 02.02.2024.
 //
 
 struct ServerError: Codable {
