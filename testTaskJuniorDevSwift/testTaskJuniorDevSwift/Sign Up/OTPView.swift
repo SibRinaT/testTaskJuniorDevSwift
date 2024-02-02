@@ -15,7 +15,7 @@ struct OtpModifer: ViewModifier {
             .multilineTextAlignment(.center)
             .keyboardType(.numberPad)
             .onReceive(Just(pin)) {_ in limitText()}
-            .frame(width: 45, height: 45)
+            .frame(width: 32, height: 32)
             .background(Color.white)
             .background(
                 Rectangle()
@@ -23,7 +23,6 @@ struct OtpModifer: ViewModifier {
             )
     }
 }
-
 
 struct OTPViewiOS14: View {
     @State var pinOne: String = ""
@@ -34,7 +33,7 @@ struct OTPViewiOS14: View {
     @State var pinSix: String = ""
     
     var body: some View {
-        HStack(spacing: 15, content: {
+        HStack(spacing: 30, content: {
                 TextField("", text: $pinOne)
                     .modifier(OtpModifer(pin:$pinOne))
                 TextField("", text:  $pinTwo)
@@ -66,7 +65,7 @@ struct OTPViewiOS15: View {
     @State var pinSix: String = ""
         
     var body: some View {
-        HStack(spacing: 15, content: {
+        HStack(spacing: 30, content: {
                 TextField("", text: $pinOne)
                     .modifier(OtpModifer(pin:$pinOne))
                     .onChange(of:pinOne){newVal in
