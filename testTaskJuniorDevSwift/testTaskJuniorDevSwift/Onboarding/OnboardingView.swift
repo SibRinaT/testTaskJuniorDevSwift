@@ -7,7 +7,6 @@
 
 import SwiftUI
 struct OnboardingView: View {
-    @State private var currentStep = 0
     
     var body: some View {
         VStack {

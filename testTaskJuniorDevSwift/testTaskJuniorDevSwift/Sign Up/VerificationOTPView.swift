@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct VerificationOTPView: View {
+    @State var sendButtonDisabled = true
+    @State var pin = ""
+    
     var body: some View {
         VStack() {
             Text("OTP Verification")
@@ -21,9 +24,15 @@ struct VerificationOTPView: View {
             
             Group {
                 if #available(iOS 15.0, *) {
-                    OTPViewiOS15()
+                    OTPViewiOS15 { pin in
+                        sendButtonDisabled = pin.count != 6
+                        self.pin = pin
+                    }
                 } else {
-                    OTPViewiOS14()
+                    OTPViewiOS14() { pin in
+                        sendButtonDisabled = pin.count != 6
+                        self.pin = pin
+                    }
                 }
             }
             .padding(.bottom, 30)
@@ -43,7 +52,8 @@ struct VerificationOTPView: View {
             .padding(.bottom, 80)
             
             LargeButton(title: "Set New Password",
-                        backgroundColor: Color.gray2,
+                        disabled: sendButtonDisabled,
+                        backgroundColor: Color.blue,
                         foregroundColor: Color.white) {
                 print("Hello World")
             }

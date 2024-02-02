@@ -17,8 +17,8 @@ struct SplashView: View {
     var body: some View {
         NavigationView {
             if isActive {
-                if isOnboardingCompleted {
-                    OnboardingView3()
+                if UserDefaults.standard.bool(forKey: "isOnboardingCompleted") {
+                    CreateAccountView()
                 } else {
                     OnboardingView()
                         .navigationBarHidden(true)
