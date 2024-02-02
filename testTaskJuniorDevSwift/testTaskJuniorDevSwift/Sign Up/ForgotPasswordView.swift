@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
+    @State var email = ""
+    
     var body: some View {
         VStack (alignment: .leading) {
             Text("Forgot Password")
@@ -15,7 +17,7 @@ struct ForgotPasswordView: View {
             Text("Enter your email address")
                 .foregroundColor(Color("gray2"))
                 .font(.callout)
-            InputFieldView(title: "Emaild Address", placeholder: "*****@gmail.com", fieldValue: "")
+            InputFieldView(title: "Emaild Address", placeholder: "*****@gmail.com", fieldValue: $email)
             
             LargeButton(title: "Send OTP",
                         backgroundColor: Color.gray,

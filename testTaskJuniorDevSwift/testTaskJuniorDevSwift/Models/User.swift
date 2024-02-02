@@ -8,14 +8,14 @@
 import Foundation
 
 struct SignUpUserRequest: Codable {
-    var name: String
-    var phone: String
+    var first_name: String
+    var phone_number: String
     var email: String
     var password: String
 }
 
 struct User: Codable {
-    var name: String
-    var phone: String
+    var first_name: String
+    var phone: String?
     var email: String
 }

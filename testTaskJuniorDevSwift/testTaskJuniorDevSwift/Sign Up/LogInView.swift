@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LogInView: View {
+    @State var email = ""
+    @State var password = ""
+    
     var body: some View {
         VStack (alignment: .leading) {
             Text("Welcome back")
@@ -16,8 +19,8 @@ struct LogInView: View {
                 .foregroundColor(Color("gray2"))
                 .font(.callout)
             
-            InputFieldView(title: "Email address", placeholder: "*****@gmail.com", fieldValue: "")
-            InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: "")
+            InputFieldView(title: "Email address", placeholder: "*****@gmail.com", fieldValue: $email)
+            InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: $password)
             
             HStack {
                 Text("Remember password")

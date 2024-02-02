@@ -1,5 +1,6 @@
 enum CustomError: Error {
     case noInternet
+    case serverError(String?)
 }
 
 enum LoadingState<Value> {
@@ -14,3 +15,4 @@ protocol LoadableObject {
     var state: LoadingState<Output> { get }
     func load()
 }
+

@@ -13,13 +13,13 @@ struct CreateAccountView: View {
     @State var phone = ""
     @State var email = ""
     @State var password = ""
+    @State var confirmPassword = ""
     
     var body: some View {
         switch viewModel.state {
         case .idle:
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
-                    //                VStack(alignment: .leading) {
                     Text("Create an account")
                         .font(.title)
                         .padding(.bottom, 5)
@@ -27,21 +27,19 @@ struct CreateAccountView: View {
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .padding(.bottom, 40)
-                    //                }
                     
-                    
-                    InputFieldView(title: "Full name", placeholder: "Ivanov Ivan", fieldValue: name)
-                    InputFieldView(title: "Phone number", placeholder: "+7(999)999-99-99", fieldValue: "")
-                    InputFieldView(title: "Email adress", placeholder: "******@gmail.com", fieldValue: "")
-                    InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: "")
-                    InputFieldView(title: "Confirm Password", placeholder: "******", isSecured: true, fieldValue: "")
+                    InputFieldView(title: "Full name", placeholder: "Ivanov Ivan", fieldValue: $name)
+                    InputFieldView(title: "Phone number", placeholder: "+7(999)999-99-99", fieldValue: $phone)
+                    InputFieldView(title: "Email adress", placeholder: "******@gmail.com", fieldValue: $email)
+                    InputFieldView(title: "Password", placeholder: "******", isSecured: true, fieldValue: $password)
+                    InputFieldView(title: "Confirm Password", placeholder: "******", isSecured: true, fieldValue: $confirmPassword)
                     
                     LargeButton(title: "Sign Up",
                                 backgroundColor: Color.blue,
                                 foregroundColor: Color.white) {
-                        print(name)
-                        viewModel.userRequest = SignUpUserRequest(name: name,
-                                                                  phone: phone,
+                        print("name", name)
+                        viewModel.userRequest = SignUpUserRequest(first_name: name,
+                                                                  phone_number: phone,
                                                                   email: email,
                                                                   password: password)
                         viewModel.load()
@@ -54,7 +52,7 @@ struct CreateAccountView: View {
             .padding()
             .navigationBarHidden(true)
         case .loading:
-            Spacer()
+            ProgressView()
         case .failed(let error):
             Spacer()
         case .loaded(let value):
@@ -66,9 +64,9 @@ struct CreateAccountView: View {
 
 
 class CreateAccountViewModel: ObservableObject, LoadableObject {
-    typealias Output = [User]
+    typealias Output = User
         
-    @Published private(set) var state: LoadingState<[User]>
+    @Published private(set) var state: LoadingState<User>
     @MainActor private let loader = Loader()
     var userRequest: SignUpUserRequest?
     
@@ -82,16 +80,23 @@ class CreateAccountViewModel: ObservableObject, LoadableObject {
         }
         state = .loading
         
-        loader.signUp(user: userRequest) { [weak self] result in
-            switch result {
-            case .success(let user):
-                print("success")
-                self?.state = .loaded(user)
-            case .failure(let error):
-                print("error")
-                self?.state = .failed(error)
+        Task {
+            do {
+                let result = try await loader.signUp(user: userRequest)
+                switch result {
+                case .success(let user):
+                    print("success")
+                    state = .loaded(user)
+                case .failure(let error):
+                    print("error")
+                    state = .failed(error)
+                }
+            } catch {
+                print(error)
             }
         }
+
+
     }
 }
 
