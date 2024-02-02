@@ -1,13 +1,13 @@
 enum CustomError: Error, CustomStringConvertible {
     case noInternet
-    case serverError(String?)
+    case serverError(String)
     
     var description: String {
         switch self {
         case .noInternet:
             return "No internet connection"
         case .serverError(let string):
-            return string ?? "Server error"
+            return string
         }
     }
 }

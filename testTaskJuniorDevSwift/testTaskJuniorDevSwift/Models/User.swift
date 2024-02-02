@@ -19,8 +19,30 @@ struct SignInUserRequest: Codable {
     var password: String
 }
 
+struct PassResetRequest: Codable {
+    var email: String
+}
+
+struct VerifyOtpModel: Codable {
+    let email: String
+    let otp: String
+}
+
+struct SetNewPasswordRequest: Codable {
+    let new_password: String
+    let token: String
+}
+
 struct User: Codable {
     var first_name: String
     var phone: String?
     var email: String
+}
+
+struct PassResetToken: Codable {
+    let token: String
+}
+
+struct NewPassResponse: Codable {
+    let email: String
 }

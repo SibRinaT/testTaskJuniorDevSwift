@@ -34,6 +34,7 @@
 		AC7411E52B6D0C17000D7AE4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E42B6D0C17000D7AE4 /* Utils.swift */; };
 		AC7411E72B6D192B000D7AE4 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E62B6D192B000D7AE4 /* CheckBox.swift */; };
 		AC7411E92B6D1AFD000D7AE4 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411E82B6D1AFD000D7AE4 /* TermsAndConditionsView.swift */; };
+		AC7411EB2B6D26BD000D7AE4 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7411EA2B6D26BD000D7AE4 /* ServerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		AC7411E42B6D0C17000D7AE4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AC7411E62B6D192B000D7AE4 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		AC7411E82B6D1AFD000D7AE4 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		AC7411EA2B6D26BD000D7AE4 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7411DD2B6CECFE000D7AE4 /* Loader.swift */,
+				AC7411EA2B6D26BD000D7AE4 /* ServerError.swift */,
 				AC7411D92B6CECA8000D7AE4 /* Types.swift */,
 				AC7411DB2B6CECC0000D7AE4 /* User.swift */,
 				AC7411DF2B6CF6A0000D7AE4 /* AsyncContentView.swift */,
@@ -263,6 +266,7 @@
 				AC7411E02B6CF6A0000D7AE4 /* AsyncContentView.swift in Sources */,
 				2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */,
 				2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */,
+				AC7411EB2B6D26BD000D7AE4 /* ServerError.swift in Sources */,
 				AC7411DE2B6CECFE000D7AE4 /* Loader.swift in Sources */,
 				2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */,
 				2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */,
