@@ -16,15 +16,13 @@ struct ProfileView: View {
                 .clipShape(Circle())
             VStack(alignment: .leading) {
                 Text("Hello Ken")
-                    .padding(.bottom, -15)
                 HStack {
                     Text("Current Balance")
                     Text("N10,712:00")
                         .foregroundColor(Color("MainColor"))
-                    EyeButtonView(isSecured: false)
-                        .padding(.bottom, 30)
                 }
             }
+            EyeButtonView(isSecured: false)
         }
     }
 }
