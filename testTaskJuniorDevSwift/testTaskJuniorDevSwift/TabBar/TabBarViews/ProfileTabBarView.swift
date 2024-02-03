@@ -11,6 +11,12 @@ struct ProfileTabBarView: View {
     @State var toggleSwich = false
     
     var body: some View {
+        NavigationView {
+            Text("Profile")
+                .foregroundColor(Color("gray2"))
+        }
+        .shadow(radius: 5, x: 5, y: 2)
+        .frame(height: 100)
         TabView {
             VStack {
                 HStack {
