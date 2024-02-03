@@ -14,6 +14,9 @@ struct ProfileTabBarView: View {
         TabView {
             VStack {
                ProfileNavigationView()
+                Toggle("Enable dark Mode", isOn: $toggleSwich)
+                    .toggleStyle(.switch)
+                    .padding(.horizontal, 28) // Добавление пустоты с обеих сторон HStack
                 ScrollView {
                     RectangleProfileView(image: "profile", title: "Edit Profile", title2: "Name, phone no, address, email ...")
                     RectangleProfileView(image: "certif", title: "Statements & Reports", title2: "Download transaction details, orders, deliveries")

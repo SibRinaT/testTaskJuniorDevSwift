@@ -13,28 +13,27 @@ struct RectangleProfileView: View {
     @State var title2: String
 
     var body: some View {
-        Rectangle()
-            .foregroundColor(.white)
-            .frame(width: 342, height: 60)
-            .shadow(radius: 2, x: 0, y: 2)
-            .overlay (
-                HStack{
-                    Image(image)
-                    VStack (alignment:.leading) {
-                        Text(title)
-                            .bold()
-                            .font(.system(size: 16)) // Настройка размера шрифта
-                        Text(title2)
-                            .foregroundColor(Color("gray2"))
-                            .font(.system(size: 12)) // Настройка размера шрифта
+        ZStack{
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 3, x: 0, y: 2)
+                        VStack {
+                            HStack {
+                                Image(image)
+                                VStack (alignment:.leading) {
+                                    Text(title)
+                                        .bold()
+                                    Text(title2)
+                                        .foregroundColor(Color("gray2"))
+                                }
+                                Spacer()
+                                Image("arrowCustom")
+                            }
+                        }
                     }
-                    Spacer() // Добавим Spacer для растягивания элементов до края
-                    Image("arrowCustom")
-                }
-                    .padding(.horizontal) // Добавление пустоты с обеих сторон HStack
-                    .padding(.vertical) // Добавление пустоты с обеих сторон HStack
-            )
-        
+//                    .padding(.horizontal) // Добавление пустоты с обеих сторон HStack
+//                    .padding(.vertical)
+                    .fixedSize(horizontal: false, vertical: true)
     }
 }
 
