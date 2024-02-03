@@ -25,7 +25,12 @@ struct ProfileTabBarView: View {
                     RectangleProfileView(image: "twoPeople", title: "Referrals", title2: "check no of friends and earn")
                     RectangleProfileView(image: "mapCustom", title: "About Us", title2: "know more about us, terms and conditions")
                 }
-            }
+                .padding(.horizontal, 28) // Добавление пустоты с обеих сторон HStack
+                
+                .onAppear {
+                           // Выключение вертикального скролл индикатора
+                           UIScrollView.appearance().showsVerticalScrollIndicator = false
+                       }            }
         }
     }
 }
