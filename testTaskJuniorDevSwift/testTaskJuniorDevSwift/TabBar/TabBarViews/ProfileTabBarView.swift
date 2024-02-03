@@ -21,21 +21,22 @@ struct ProfileTabBarView: View {
                 .frame(height: 100)
                 HStack {
                     Image("KaneIcon")
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text("Hello Ken")
+                            .padding(.bottom, -15)
                         HStack {
                             Text("Current Balance")
                             Text("N10,712:00")
                                 .foregroundColor(Color("MainColor"))
-                            Image(systemName: "eye.slash")
+                            EyeButtonView(isSecured: false)
                                 .padding(.bottom, 30)
                         }
                     }
                 }
-                
                 Toggle("Enable dark Mode", isOn: $toggleSwich)
                     .toggleStyle(.switch)
-                
+                    .padding(.horizontal, 28) // Добавление пустоты с обеих сторон HStack
+
                 RectangleProfileView(image: "profile", title: "Edit Profile", title2: "Name, phone no, address, email ...")
                 RectangleProfileView(image: "certif", title: "Statements & Reports", title2: "Download transaction details, orders, deliveries")
                 RectangleProfileView(image: "notification", title: "Notification Settings", title2: "mute, unmute, set location & tracking setting")

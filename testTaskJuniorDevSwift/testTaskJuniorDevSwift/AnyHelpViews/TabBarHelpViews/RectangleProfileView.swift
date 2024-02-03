@@ -23,13 +23,18 @@ struct RectangleProfileView: View {
                     VStack (alignment:.leading) {
                         Text(title)
                             .bold()
+                            .font(.system(size: 16)) // Настройка размера шрифта
                         Text(title2)
                             .foregroundColor(Color("gray2"))
+                            .font(.system(size: 12)) // Настройка размера шрифта
                     }
                     Spacer() // Добавим Spacer для растягивания элементов до края
                     Image("arrowCustom")
                 }
+                    .padding(.horizontal) // Добавление пустоты с обеих сторон HStack
+                    .padding(.vertical) // Добавление пустоты с обеих сторон HStack
             )
+        
     }
 }
 
