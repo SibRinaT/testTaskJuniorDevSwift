@@ -11,6 +11,7 @@ struct InputFieldView: View {
     let title: String
     let placeholder: String
     @State var isSecured = false
+    @State private var isPasswordHidden = true
     @Binding var fieldValue: String
     
     var body: some View {
@@ -20,20 +21,21 @@ struct InputFieldView: View {
                 .font(.caption)
             ZStack(alignment: .trailing) {
                 Group {
-                    if isSecured {
-                        SecureField("aadsv", text: $fieldValue)
-                            .font(.caption2)
-                    } else {
-                        TextField("aadsv", text: $fieldValue)
-                            .font(.caption2)
-                    } 
+                    if isSecured && isPasswordHidden {
+                        SecureField(placeholder, text: $fieldValue)
+                    }
+                    else {
+                        TextField(placeholder, text: $fieldValue)
+                    }
                 }
+                .font(.caption2)
                 .textFieldStyle(.roundedBorder)
                 
+                
                 Button(action: {
-                    isSecured.toggle()
+                    isPasswordHidden.toggle()
                 }) {
-                    Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                    Image(systemName: self.isPasswordHidden ? "eye" : "eye.slash")
                         .accentColor(.gray)
                 }
                 .padding(.trailing, 5)
