@@ -26,6 +26,7 @@ struct RectangleProfileView: View {
                         Text(title2)
                             .foregroundColor(Color("gray2"))
                     }
+                    Spacer() // Добавим Spacer для растягивания элементов до края
                     Image("arrowCustom")
                 }
             )

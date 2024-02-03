@@ -112,9 +112,9 @@
 		2E76184F2B6B5E6D004F3219 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				2E0E81662B6D3FBE008F72EF /* TabBarViews */,
 				2E7618502B6B5E86004F3219 /* TabBar.swift */,
-				2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */,
+				2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */,
+				2E0E81662B6D3FBE008F72EF /* TabBarViews */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -131,6 +131,14 @@
 				AC7411D32B6CE879000D7AE4 /* OTPView */,
 			);
 			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */ = {
+			isa = PBXGroup;
+			children = (
+				2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */,
+			);
+			path = TabBarHelpViews;
 			sourceTree = "<group>";
 		};
 		2EB63B912B31BF1200121DBC = {

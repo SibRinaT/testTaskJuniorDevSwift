@@ -11,14 +11,14 @@ struct ProfileTabBarView: View {
     @State var toggleSwich = false
     
     var body: some View {
-        NavigationView {
-            Text("Profile")
-                .foregroundColor(Color("gray2"))
-        }
-        .shadow(radius: 5, x: 5, y: 2)
-        .frame(height: 100)
         TabView {
             VStack {
+                NavigationView {
+                    Text("Profile")
+                        .foregroundColor(Color("gray2"))
+                }
+                .shadow(radius: 5, x: 5, y: 2)
+                .frame(height: 100)
                 HStack {
                     Image("KaneIcon")
                     VStack {
@@ -43,7 +43,6 @@ struct ProfileTabBarView: View {
                 RectangleProfileView(image: "twoPeople", title: "Referrals", title2: "check no of friends and earn")
                 RectangleProfileView(image: "mapCustom", title: "About Us", title2: "know more about us, terms and conditions")
             }
-       
         }
     }
 }
