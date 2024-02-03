@@ -35,8 +35,8 @@ struct SetNewPasswordRequest: Codable {
 
 struct User: Codable {
     var first_name: String
-    var avatarUrl: String
-    var balance: String
+    var avatarUrl: String?
+    var balance: String?
     var phone: String?
     var email: String
 }

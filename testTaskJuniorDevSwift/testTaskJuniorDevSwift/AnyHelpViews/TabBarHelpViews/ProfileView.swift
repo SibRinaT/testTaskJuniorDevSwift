@@ -13,8 +13,8 @@ struct ProfileView: View {
     
     var body: some View {
         HStack {
-            if #available(iOS 15.0, *) {
-                AsyncImage(url: URL(string: user.avatarUrl))
+            if #available(iOS 15.0, *), let url = user.avatarUrl {
+                AsyncImage(url: URL(string: url))
                     .clipShape(Circle())
                     .frame(width: 60, height: 60)
             } else {
@@ -25,7 +25,7 @@ struct ProfileView: View {
                 Text(user.first_name)
                 HStack {
                     Text("Current Balance")
-                    Text(user.balance)
+                    Text(user.balance ?? "0")
                         .foregroundColor(Color("MainColor"))
                 }
             }
