@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeTabBarView: View {
     var body: some View {
         VStack {
+<<<<<<< HEAD
          
             
             VStack {
@@ -19,6 +20,8 @@ struct HomeTabBarView: View {
                     .frame(width: 200, height: 120)
             }
            
+=======
+>>>>>>> main
         }
     }
 }

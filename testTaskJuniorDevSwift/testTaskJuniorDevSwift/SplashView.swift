@@ -16,7 +16,7 @@ struct SplashView: View {
         NavigationView {
             if isActive {
                 if let user: User = Utils.getModelFor(key: .user) {
-                    TabBarView()
+                    TabBarView(user: user)
                 } else if Utils.getBoolFor(key: .onboarding) {
                     CreateAccountView()
                 } else {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreateAccountView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var viewModel = CreateAccountViewModel()
     @State var name = ""
     @State var phone = ""
@@ -96,7 +96,7 @@ struct CreateAccountView: View {
                 viewModel.state = .idle
             }
         case .loaded(let user):
-            TabBarView()
+            TabBarView(user: user)
         }
     }
 }
