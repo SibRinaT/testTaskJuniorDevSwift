@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ProfileNavigationView: View {
+struct ProfileView: View {
     @State var toggleSwich = false
 
     var body: some View {
         VStack {
             VStack {
-                NavigationView {
+               
                     HStack {
                         Image("KaneIcon")
                             .clipShape(Circle())
@@ -29,16 +29,12 @@ struct ProfileNavigationView: View {
                             }
                         }
                     }
-                    .padding()
-                    .padding(.bottom, 50)
-                    .navigationTitle("Profile")
-                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
         }
     }
-}
+
 
 #Preview {
-    ProfileNavigationView()
+    ProfileView()
 }
