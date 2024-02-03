@@ -24,8 +24,6 @@ struct ProfileNavigationView: View {
                         .padding(.top, 60) // Регулировка отступа от текста
                 )
             }
-            .padding(.top, -80)
-            
             HStack {
                 Image("KaneIcon")
                 VStack(alignment: .leading) {
