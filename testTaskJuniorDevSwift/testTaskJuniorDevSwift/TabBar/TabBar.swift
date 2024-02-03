@@ -27,7 +27,6 @@ struct TabBarView: View {
                     Text("Track")
                 }
             ProfileTabBarView()
-                .padding(.horizontal, 25)
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
