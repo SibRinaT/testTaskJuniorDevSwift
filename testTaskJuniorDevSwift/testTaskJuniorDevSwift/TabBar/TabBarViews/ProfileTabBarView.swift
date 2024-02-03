@@ -15,7 +15,7 @@ struct ProfileTabBarView: View {
             ScrollView(showsIndicators: false) {
                 VStack {
                     ProfileView()
-                        .padding(.bottom)
+                        .padding(.vertical)
                     Toggle("Enable dark Mode", isOn: $toggleSwich)
                         .toggleStyle(.switch)
                         .padding(.bottom)
