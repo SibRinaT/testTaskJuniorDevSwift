@@ -16,7 +16,7 @@ struct RectangleProfileView: View {
         Rectangle()
             .foregroundColor(.white)
             .frame(width: 342, height: 60)
-            .shadow(radius: 3, x: 0, y: 2)
+            .shadow(radius: 2, x: 0, y: 2)
             .overlay (
                 HStack{
                     Image(image)

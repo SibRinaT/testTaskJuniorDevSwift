@@ -19,6 +19,7 @@
 		2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */; };
 		2E7E87AB2B6CFDAC008D45A8 /* RectangleProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */; };
 		2E86AB692B6E0767007F1C8B /* EyeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */; };
+		2E86AB6C2B6E11AB007F1C8B /* ProfileNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86AB6B2B6E11AB007F1C8B /* ProfileNavigationView.swift */; };
 		2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */; };
 		2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */; };
 		2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */; };
@@ -55,6 +56,7 @@
 		2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleProfileView.swift; sourceTree = "<group>"; };
 		2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButtonView.swift; sourceTree = "<group>"; };
+		2E86AB6B2B6E11AB007F1C8B /* ProfileNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationView.swift; sourceTree = "<group>"; };
 		2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView2.swift; sourceTree = "<group>"; };
 		2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView3.swift; sourceTree = "<group>"; };
 		2EB63B9A2B31BF1200121DBC /* testTaskJuniorDevSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTaskJuniorDevSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */,
+				2E86AB6B2B6E11AB007F1C8B /* ProfileNavigationView.swift */,
 			);
 			path = TabBarHelpViews;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */,
 				2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */,
 				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
+				2E86AB6C2B6E11AB007F1C8B /* ProfileNavigationView.swift in Sources */,
 				AC7411E72B6D192B000D7AE4 /* CheckBox.swift in Sources */,
 				2EBB6C6E2B691C4E004796B2 /* SplashView.swift in Sources */,
 				2E76184C2B6B5C93004F3219 /* InputFieldView.swift in Sources */,
