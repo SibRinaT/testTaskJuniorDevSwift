@@ -7,32 +7,22 @@
 
 import SwiftUI
 
-struct ProfileNavigationView: View {
+struct ProfileView: View {
     @State var toggleSwich = false
-
+    
     var body: some View {
-        VStack {
-            VStack {
-                NavigationView {
-                    HStack {
-                        Image("KaneIcon")
-                            .clipShape(Circle())
-                        VStack(alignment: .leading) {
-                            Text("Hello Ken")
-                                .padding(.bottom, -15)
-                            HStack {
-                                Text("Current Balance")
-                                Text("N10,712:00")
-                                    .foregroundColor(Color("MainColor"))
-                                EyeButtonView(isSecured: false)
-                                    .padding(.bottom, 30)
-                            }
-                        }
-                    }
-                    .padding()
-                    .padding(.bottom, 50)
-                    .navigationTitle("Profile")
-                    .navigationBarTitleDisplayMode(.inline)
+        HStack {
+            Image("KaneIcon")
+                .clipShape(Circle())
+            VStack(alignment: .leading) {
+                Text("Hello Ken")
+                    .padding(.bottom, -15)
+                HStack {
+                    Text("Current Balance")
+                    Text("N10,712:00")
+                        .foregroundColor(Color("MainColor"))
+                    EyeButtonView(isSecured: false)
+                        .padding(.bottom, 30)
                 }
             }
         }
@@ -40,5 +30,5 @@ struct ProfileNavigationView: View {
 }
 
 #Preview {
-    ProfileNavigationView()
+    ProfileView()
 }

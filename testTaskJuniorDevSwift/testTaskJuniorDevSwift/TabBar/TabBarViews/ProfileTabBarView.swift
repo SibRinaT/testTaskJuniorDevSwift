@@ -13,7 +13,7 @@ struct ProfileTabBarView: View {
     var body: some View {
         TabView {
             VStack {
-               ProfileNavigationView()
+                ProfileView()
                 Toggle("Enable dark Mode", isOn: $toggleSwich)
                     .toggleStyle(.switch)
                     .padding(.horizontal, 28) // Добавление пустоты с обеих сторон HStack
@@ -25,17 +25,22 @@ struct ProfileTabBarView: View {
                     RectangleProfileView(image: "twoPeople", title: "Referrals", title2: "check no of friends and earn")
                     RectangleProfileView(image: "mapCustom", title: "About Us", title2: "know more about us, terms and conditions")
                 }
-                .padding(.horizontal, 28) // Добавление пустоты с обеих сторон HStack
                 
                 .onAppear {
-                           // Выключение вертикального скролл индикатора
-                           UIScrollView.appearance().showsVerticalScrollIndicator = false
-                       }            }
+                    // Выключение вертикального скролл индикатора
+                    UIScrollView.appearance().showsVerticalScrollIndicator = false
+                }
+            }
         }
+        .padding()
+        .navigationTitle("Profile")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 
 #Preview {
-    ProfileTabBarView()
+    NavigationView {
+        ProfileTabBarView()
+    }
 }

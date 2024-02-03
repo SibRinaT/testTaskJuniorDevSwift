@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeTabBarView: View {
     var body: some View {
         VStack {
-            ProfileNavigationView()
+            ProfileView()
         }
     }
 }

@@ -26,11 +26,13 @@ struct TabBarView: View {
                     Image(systemName: "car")
                     Text("Track")
                 }
-            ProfileTabBarView()
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Profile")
-                }
+            NavigationView {
+                ProfileTabBarView()
+            }
+            .tabItem {
+                Image(systemName: "person.crop.circle")
+                Text("Profile")
+            }
         }
     }
 }
