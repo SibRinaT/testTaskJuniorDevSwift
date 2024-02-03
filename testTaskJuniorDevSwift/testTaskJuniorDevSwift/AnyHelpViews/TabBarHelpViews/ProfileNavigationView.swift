@@ -22,6 +22,7 @@ struct ProfileView: View {
                         .foregroundColor(Color("MainColor"))
                 }
             }
+            Spacer()
             EyeButtonView(isSecured: false)
         }
     }

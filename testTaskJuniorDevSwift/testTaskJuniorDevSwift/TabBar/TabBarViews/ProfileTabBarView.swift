@@ -16,7 +16,6 @@ struct ProfileTabBarView: View {
                 ProfileView()
                 Toggle("Enable dark Mode", isOn: $toggleSwich)
                     .toggleStyle(.switch)
-                    .padding(.horizontal, 28) // Добавление пустоты с обеих сторон HStack
                 ScrollView {
                     RectangleProfileView(image: "profile", title: "Edit Profile", title2: "Name, phone no, address, email ...")
                     RectangleProfileView(image: "certif", title: "Statements & Reports", title2: "Download transaction details, orders, deliveries")
@@ -25,7 +24,6 @@ struct ProfileTabBarView: View {
                     RectangleProfileView(image: "twoPeople", title: "Referrals", title2: "check no of friends and earn")
                     RectangleProfileView(image: "mapCustom", title: "About Us", title2: "know more about us, terms and conditions")
                 }
-                
                 .onAppear {
                     // Выключение вертикального скролл индикатора
                     UIScrollView.appearance().showsVerticalScrollIndicator = false
