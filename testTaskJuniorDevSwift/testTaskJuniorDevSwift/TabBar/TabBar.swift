@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabBarView: View {
     @State var toggleSwich = false
+    @State var user: User
+    
     var body: some View {
         TabView {
             Text("Home")
@@ -27,7 +29,7 @@ struct TabBarView: View {
                     Text("Track")
                 }
             NavigationView {
-                ProfileTabBarView()
+                ProfileTabBarView(user: user)
             }
             .tabItem {
                 Image(systemName: "person.crop.circle")
@@ -38,5 +40,5 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView()
+    TabBarView(user: User.mockUser)
 }

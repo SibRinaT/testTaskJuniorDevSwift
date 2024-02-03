@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ProfileTabBarView: View {
     @State var toggleSwich = false
+    @State var user: User
     
     var body: some View {
         TabView {
             ScrollView(showsIndicators: false) {
                 VStack {
-                    ProfileView()
+                    ProfileView(user: user)
                         .padding(.vertical)
                     Toggle("Enable dark Mode", isOn: $toggleSwich)
                         .toggleStyle(.switch)
@@ -37,6 +38,6 @@ struct ProfileTabBarView: View {
 
 #Preview {
     NavigationView {
-        ProfileTabBarView()
+        ProfileTabBarView(user: User.mockUser)
     }
 }

@@ -9,16 +9,23 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var toggleSwich = false
+    @State var user: User
     
     var body: some View {
         HStack {
-            Image("KaneIcon")
-                .clipShape(Circle())
+            if #available(iOS 15.0, *) {
+                AsyncImage(url: URL(string: user.avatarUrl))
+                    .clipShape(Circle())
+                    .frame(width: 60, height: 60)
+            } else {
+                Image("KaneIcon")
+                    .clipShape(Circle())
+            }
             VStack(alignment: .leading) {
-                Text("Hello Ken")
+                Text(user.first_name)
                 HStack {
                     Text("Current Balance")
-                    Text("N10,712:00")
+                    Text(user.balance)
                         .foregroundColor(Color("MainColor"))
                 }
             }
@@ -29,5 +36,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: User.mockUser)
 }

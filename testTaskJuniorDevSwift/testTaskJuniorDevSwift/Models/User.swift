@@ -35,6 +35,8 @@ struct SetNewPasswordRequest: Codable {
 
 struct User: Codable {
     var first_name: String
+    var avatarUrl: String
+    var balance: String
     var phone: String?
     var email: String
 }
@@ -45,4 +47,11 @@ struct PassResetToken: Codable {
 
 struct NewPassResponse: Codable {
     let email: String
+}
+
+
+extension User {
+    static var mockUser: User {
+        User(first_name: "Harry", avatarUrl: "https://i.pravatar.cc/50", balance: "1000", email: "potter@gmail.com")
+    }
 }
