@@ -35,7 +35,6 @@ struct RectangleProfileView: View {
             }
         }
         .fixedSize(horizontal: false, vertical: true)
-        .padding(.horizontal, 3)
     }
 }
 

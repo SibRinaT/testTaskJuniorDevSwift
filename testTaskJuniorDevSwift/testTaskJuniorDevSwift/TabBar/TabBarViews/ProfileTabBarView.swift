@@ -26,9 +26,9 @@ struct ProfileTabBarView: View {
                     RectangleProfileView(image: "twoPeople", title: "Referrals", title2: "check no of friends and earn")
                     RectangleProfileView(image: "mapCustom", title: "About Us", title2: "know more about us, terms and conditions")
                 }
+                .padding()
             }
         }
-        .padding()
         .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)
     }
