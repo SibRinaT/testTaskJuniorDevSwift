@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LogInView: View {
+    @ObservedObject var viewModel = LoginViewModel()
     @State var email = ""
     @State var password = ""
     
-    var body: some View {
+    fileprivate func makeView() -> some View {
         VStack (alignment: .leading) {
             Text("Welcome back")
                 .font(.title)
@@ -38,7 +39,10 @@ struct LogInView: View {
             LargeButton(title: "Log In",
                         backgroundColor: Color.gray,
                         foregroundColor: Color.white) {
-                print("Hello World")
+                
+                let req = SignInUserRequest(email: email, password: password)
+                viewModel.userRequest = req
+                viewModel.load()
             }
             
             VStack {
@@ -54,19 +58,71 @@ struct LogInView: View {
                 }
                 .padding(.bottom, 10)
                 Text("or log in using")
-                        .foregroundColor(Color("gray2"))
+                    .foregroundColor(Color("gray2"))
                 Image("Vector")
             }
             .frame(maxWidth: .infinity, alignment: .center)
-
+            
         }
         .navigationBarHidden(true)
         .padding()
     }
+    
+    var body: some View {
+        switch viewModel.state {
+        case .idle:
+            makeView()
+        case .loading:
+            ProgressView()
+        case .failed(let customError):
+            LoadingErrorView(error: customError) {
+                viewModel.load()
+            } closeHandler: {
+                viewModel.state = .idle
+            }
+        case .loaded(let user):
+            TabBarView(user: user)
+        }
+    }
 }
+
+
+class LoginViewModel: ObservableObject, LoadableObject {
+    typealias Output = User
+    
+    @Published var state: LoadingState<User>
+    @MainActor private let loader = Loader()
+    var userRequest: SignInUserRequest?
+    
+    init() {
+        self.state = .idle
+    }
+    
+    @MainActor func load() {
+        guard let userRequest = userRequest else {
+            return
+        }
+        state = .loading
+        Task {
+            do {
+                let user = try await Loader().signIn(user: userRequest)
+                Utils.save(model: user, key: .user)
+                state = .loaded(user)
+            } catch {
+                if let error = error as? CustomError {
+                    state = .failed(error)
+                } else {
+                    state = .failed(CustomError.serverError(error.localizedDescription))
+                }
+            }
+        }
+    }
+}
+
 
 #Preview {
     NavigationView {
         LogInView()
     }
 }
+
