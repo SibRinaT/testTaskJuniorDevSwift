@@ -10,18 +10,8 @@ import SwiftUI
 struct HomeTabBarView: View {
     var body: some View {
         VStack {
-<<<<<<< HEAD
-         
-            
-            VStack {
-                ProfileView()
-                Rectangle()
-                    .foregroundColor(Color("gray2"))
-                    .frame(width: 200, height: 120)
-            }
-           
-=======
->>>>>>> main
+
+
         }
     }
 }

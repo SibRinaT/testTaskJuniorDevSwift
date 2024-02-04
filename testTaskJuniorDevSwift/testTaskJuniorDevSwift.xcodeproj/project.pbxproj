@@ -21,6 +21,7 @@
 		2E86AB692B6E0767007F1C8B /* EyeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */; };
 		2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */; };
 		2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */; };
+		2EA546D82B6E4D62009EADD6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA546D72B6E4D62009EADD6 /* ProfileView.swift */; };
 		2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */; };
 		2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9F2B31BF1200121DBC /* ContentView.swift */; };
 		2EB63BA22B31BF1500121DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB63BA12B31BF1500121DBC /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButtonView.swift; sourceTree = "<group>"; };
 		2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView2.swift; sourceTree = "<group>"; };
 		2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView3.swift; sourceTree = "<group>"; };
+		2EA546D72B6E4D62009EADD6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2EB63B9A2B31BF1200121DBC /* testTaskJuniorDevSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTaskJuniorDevSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTaskJuniorDevSwiftApp.swift; sourceTree = "<group>"; };
 		2EB63B9F2B31BF1200121DBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */,
+				2EA546D72B6E4D62009EADD6 /* ProfileView.swift */,
 			);
 			path = TabBarHelpViews;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				AC7411E52B6D0C17000D7AE4 /* Utils.swift in Sources */,
 				AC7411D52B6CE889000D7AE4 /* OTPView14.swift in Sources */,
 				2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */,
+				2EA546D82B6E4D62009EADD6 /* ProfileView.swift in Sources */,
 				AC7411E22B6CF6BE000D7AE4 /* LoadingErrorView.swift in Sources */,
 				AC7411DC2B6CECC0000D7AE4 /* User.swift in Sources */,
 				2E0E81632B6D3F93008F72EF /* TrackTabBarView.swift in Sources */,
