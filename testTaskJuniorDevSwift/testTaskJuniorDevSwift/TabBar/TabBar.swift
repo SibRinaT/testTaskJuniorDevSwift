@@ -13,15 +13,14 @@ struct TabBarView: View {
     
     var body: some View {
         TabView {
-            NavigationView {
-                HomeTabBarView(user: user)
-            }
+            Text("Home")
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Text("Wallet")
-                .tabItem {
+            NavigationView {
+                WalletTabBarView(user: user)
+            }                .tabItem {
                     Image(systemName: "wallet.pass")
                     Text("Wallet")
                 }

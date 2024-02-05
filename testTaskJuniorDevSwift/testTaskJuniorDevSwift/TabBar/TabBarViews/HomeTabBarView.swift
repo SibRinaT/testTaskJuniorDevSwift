@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeTabBarView: View {
+struct WalletTabBarView: View {
     @State var user: User
 
     var body: some View {
@@ -64,6 +64,6 @@ struct HomeTabBarView: View {
 
 #Preview {
     NavigationView {
-        HomeTabBarView(user: User.mockUser)
+        WalletTabBarView(user: User.mockUser)
     }
 }
