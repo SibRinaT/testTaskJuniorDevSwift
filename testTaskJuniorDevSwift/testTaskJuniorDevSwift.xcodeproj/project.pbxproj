@@ -18,6 +18,7 @@
 		2E7618542B6B63F8004F3219 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7618532B6B63F8004F3219 /* LogInView.swift */; };
 		2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */; };
 		2E7E87AB2B6CFDAC008D45A8 /* RectangleProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */; };
+		2E85B4122B70A28B00E33425 /* ListElementHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E85B4112B70A28B00E33425 /* ListElementHomeView.swift */; };
 		2E86AB692B6E0767007F1C8B /* EyeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */; };
 		2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */; };
 		2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */; };
@@ -56,6 +57,7 @@
 		2E7618532B6B63F8004F3219 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		2E7618552B6B6AFD004F3219 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleProfileView.swift; sourceTree = "<group>"; };
+		2E85B4112B70A28B00E33425 /* ListElementHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElementHomeView.swift; sourceTree = "<group>"; };
 		2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButtonView.swift; sourceTree = "<group>"; };
 		2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView2.swift; sourceTree = "<group>"; };
 		2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView3.swift; sourceTree = "<group>"; };
@@ -138,11 +140,22 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
+		2E85B4102B70A23300E33425 /* MainFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */,
+				2EB63B9F2B31BF1200121DBC /* ContentView.swift */,
+				2EBB6C6D2B691C4E004796B2 /* SplashView.swift */,
+			);
+			path = MainFiles;
+			sourceTree = "<group>";
+		};
 		2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */ = {
 			isa = PBXGroup;
 			children = (
 				2E7E87AA2B6CFDAC008D45A8 /* RectangleProfileView.swift */,
 				2EA546D72B6E4D62009EADD6 /* ProfileView.swift */,
+				2E85B4112B70A28B00E33425 /* ListElementHomeView.swift */,
 			);
 			path = TabBarHelpViews;
 			sourceTree = "<group>";
@@ -150,9 +163,9 @@
 		2E86AB662B6E0719007F1C8B /* AnyHelpViews */ = {
 			isa = PBXGroup;
 			children = (
+				2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */,
 				2E86AB6A2B6E07BF007F1C8B /* Fields */,
 				2E86AB672B6E074A007F1C8B /* Buttons */,
-				2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */,
 			);
 			path = AnyHelpViews;
 			sourceTree = "<group>";
@@ -194,13 +207,11 @@
 		2EB63B9C2B31BF1200121DBC /* testTaskJuniorDevSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2E85B4102B70A23300E33425 /* MainFiles */,
 				AC7411E32B6D0C0C000D7AE4 /* Utils */,
 				AC7411D82B6CEC9B000D7AE4 /* Models */,
 				2E7618522B6B6349004F3219 /* Sign Up */,
 				2E86AB662B6E0719007F1C8B /* AnyHelpViews */,
-				2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */,
-				2EB63B9F2B31BF1200121DBC /* ContentView.swift */,
-				2EBB6C6D2B691C4E004796B2 /* SplashView.swift */,
 				2E76184F2B6B5E6D004F3219 /* TabBar */,
 				2E7618482B6B5BC7004F3219 /* Onboarding */,
 				2EB63BA12B31BF1500121DBC /* Assets.xcassets */,
@@ -320,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0C0E472B6CBF760075A057 /* OTPView15.swift in Sources */,
+				2E85B4122B70A28B00E33425 /* ListElementHomeView.swift in Sources */,
 				2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */,
 				2E0E815F2B6D3C47008F72EF /* ProfileTabBarView.swift in Sources */,
 				2E76184E2B6B5C95004F3219 /* LargeButtonStyle.swift in Sources */,

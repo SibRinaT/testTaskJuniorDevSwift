@@ -12,6 +12,7 @@ struct HomeTabBarView: View {
 
     var body: some View {
         VStack {
+            Text("") // need to fix
             ProfileView(user: user)
             
             Rectangle()
@@ -47,17 +48,15 @@ struct HomeTabBarView: View {
                      .bold()
             }
              //testRecnatgles
-            ScrollView {
-                RectangleProfileView(image: "BankIcon", title: "fadsfads", title2: "safddsaf")
-                RectangleProfileView(image: "BankIcon", title: "fadsfads", title2: "safddsaf")
-                RectangleProfileView(image: "BankIcon", title: "fadsfads", title2: "safddsaf")
-                RectangleProfileView(image: "BankIcon", title: "fadsfads", title2: "safddsaf")
-                RectangleProfileView(image: "BankIcon", title: "fadsfads", title2: "safddsaf")
-                RectangleProfileView(image: "BankIcon", title: "fadsfads", title2: "safddsaf")
-
+                List {
+                    ListElementHomeView(transactionValue: "3,000.00", transactionTypeMinus: false, textTransaction: "Delivery fee", dateTransaction: "July 7, 2022")
+                    ListElementHomeView(transactionValue: "2,000.00", transactionTypeMinus: true, textTransaction: "Lalalalala", dateTransaction: "July 4, 2022")
+                    ListElementHomeView(transactionValue: "3,000.00", transactionTypeMinus: false, textTransaction: "Third Delivery ", dateTransaction: "July 1, 2022")
+                    ListElementHomeView(transactionValue: "1,000.00", transactionTypeMinus: true, textTransaction: "Another One", dateTransaction: "July 27, 2022")
+                    ListElementHomeView(transactionValue: "2,500.00", transactionTypeMinus: true, textTransaction: "Experts Are The Best", dateTransaction: "July 23, 2022")
+                    ListElementHomeView(transactionValue: "3,000.00", transactionTypeMinus: false, textTransaction: "Delivery fee", dateTransaction: "July 17, 2022")
+                    }
             }
-
-        }
         .navigationTitle("Home")
         .navigationBarTitleDisplayMode(.inline)
     }
