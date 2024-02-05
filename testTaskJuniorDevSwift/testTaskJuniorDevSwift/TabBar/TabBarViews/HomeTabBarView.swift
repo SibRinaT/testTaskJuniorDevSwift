@@ -1,5 +1,5 @@
 //
-//  HomeTabBarView.swift
+//  WalletTabBarView.swift
 //  testTaskJuniorDevSwift
 //
 //  Created by Ainur on 02.02.2024.
@@ -7,63 +7,33 @@
 
 import SwiftUI
 
-struct WalletTabBarView: View {
-    @State var user: User
-
+struct HomeTabBarView: View {
     var body: some View {
         VStack {
-            Text("") // need to fix
-            ProfileView(user: user)
-            
             Rectangle()
-                .cornerRadius(10)
-                .foregroundColor(Color("gray1"))
-                .frame(height: 116)
-                .padding(.horizontal)
-                .overlay(
-                    VStack{
-                        Text("Top Up")
-                            .bold()
-                        HStack {
-                            VStack {
-                                Image("BankIcon")
-                                Text("Bank")
-                            }
-                            VStack {
-                                Image("TransferIcon")
-                                Text("Transfer")
-
-                            }
-                            VStack {
-                                Image("CardIcon")
-                                Text("Card")
-                            }
-                        }
+                .overlay (
+                    HStack {
+                        Image("profile")
                     }
                 )
-            VStack(alignment: .leading)
-             {
-                Text("Transaction History")
-                     .font(.title2)
-                     .bold()
+            .foregroundColor(Color("MainColor"))
+            .frame(height: 100)
+            
+            Text("What would you like to do")
+            
+            HStack {
+                HomeRectangleView(image: "customerIcon", title: "Customer Care", smallTitle: "Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today")
+                HomeRectangleView(image: "customerIcon", title: "Send a package", smallTitle: "Request for a driver to pick up or deliver your package for you")
             }
-             //testRecnatgles
-                List {
-                    ListElementHomeView(transactionValue: "3,000.00", transactionTypeMinus: false, textTransaction: "Delivery fee", dateTransaction: "July 7, 2022")
-                    ListElementHomeView(transactionValue: "2,000.00", transactionTypeMinus: true, textTransaction: "Lalalalala", dateTransaction: "July 4, 2022")
-                    ListElementHomeView(transactionValue: "3,000.00", transactionTypeMinus: false, textTransaction: "Third Delivery ", dateTransaction: "July 1, 2022")
-                    ListElementHomeView(transactionValue: "1,000.00", transactionTypeMinus: true, textTransaction: "Another One", dateTransaction: "July 27, 2022")
-                    ListElementHomeView(transactionValue: "2,500.00", transactionTypeMinus: true, textTransaction: "Experts Are The Best", dateTransaction: "July 23, 2022")
-                    ListElementHomeView(transactionValue: "3,000.00", transactionTypeMinus: false, textTransaction: "Delivery fee", dateTransaction: "July 17, 2022")
-                    }
+            HStack {
+                HomeRectangleView(image: "customerIcon", title: "Fund your wallet", smallTitle: "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today")
+                HomeRectangleView(image: "customerIcon", title: "Chats", smallTitle: "Search for available rider within your area")
             }
-        .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.inline)
+          
+        }
     }
 }
 
 #Preview {
-    NavigationView {
-        WalletTabBarView(user: User.mockUser)
-    }
+    HomeTabBarView()
 }
