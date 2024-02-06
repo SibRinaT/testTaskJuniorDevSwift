@@ -8,21 +8,31 @@
 import SwiftUI
 
 struct HomeTabBarView: View {
+    @State var user: User
     var body: some View {
         VStack{
             Rectangle()
                 .overlay (
                     HStack {
-                        Image("profile")
-                        VStack (alignment: .leading){
-                            Text("Hello Ken!")
+                        if #available(iOS 15.0, *), let url = user.avatarUrl {
+                            AsyncImage(url: URL(string: url))
+                                .clipShape(Circle())
+                                .frame(width: 60, height: 60)
+                                .overlay(RoundedRectangle(cornerRadius: 30).stroke(lineWidth: 1).foregroundColor(Color.white))
+                        } else {
+                            Image("KaneIcon")
+
+                        }
+                        VStack(alignment: .leading) {
+                            Text("Hello " + user.first_name + "!")
+                                .bold()
+                                .font(.title2)
                                 .foregroundColor(.white)
                             Text("We trust you are having a great time")
                                 .font(.caption2)
                                 .foregroundColor(Color("gray1"))
                         }
-                        Image("notificationIcon")
-
+                
 //                        Circle()
 //                            .foregroundColor(Color("circleColor"))
 //                            .position(CGPoint(x: 35.0, y: 120.0))
@@ -33,10 +43,13 @@ struct HomeTabBarView: View {
 //                            .frame(height: 122)
                     }
                 )
+                .cornerRadius(10)
                 .clipped()
             .foregroundColor(Color("MainColor"))
             .frame(height: 91)
             .padding(.horizontal)
+            
+            
             Text("What would you like to do")
             
             HStack {
@@ -44,7 +57,7 @@ struct HomeTabBarView: View {
                 HomeRectangleView(image: "boxIcon", title: "Send a package", smallTitle: "Request for a driver to pick up or deliver your package for you", grayColor: true)
             }
             HStack {
-                    HomeRectangleView(image: "walletHomeIcon", title: "Fund your wallet", smallTitle: "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today", grayColor: false)
+                    HomeRectangleView(image: "walletHomeIcon", title: "Fund your wallet", smallTitle: "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today", grayColor: true)
                     HomeRectangleView(image: "chatIcon", title: "Chats", smallTitle: "Search for available rider within your area", grayColor: false)
             }
           
@@ -53,5 +66,5 @@ struct HomeTabBarView: View {
 }
 
 #Preview {
-    HomeTabBarView()
+    HomeTabBarView(user: User.mockUser)
 }
