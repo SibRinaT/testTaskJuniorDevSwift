@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Supabase
 
 struct LogInView: View {
     @ObservedObject var viewModel = LoginViewModel()
@@ -104,15 +105,13 @@ class LoginViewModel: ObservableObject, LoadableObject {
         }
         state = .loading
         Task {
-            do {
-                let user = try await Loader().signIn(user: userRequest)
-                Utils.save(model: user, key: .user)
-                state = .loaded(user)
-            } catch {
-                if let error = error as? CustomError {
-                    state = .failed(error)
-                } else {
-                    state = .failed(CustomError.serverError(error.localizedDescription))
+            Task {
+                do {
+                    let session = try await Service.supabase.auth.signIn(
+                        email: "test@test.ru",
+                        password: "123456"
+                        )
+                        print(session)
                 }
             }
         }

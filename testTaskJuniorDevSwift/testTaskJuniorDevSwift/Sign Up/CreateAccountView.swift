@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Supabase
 
 struct CreateAccountView: View {
     @State var name = ""
@@ -85,15 +86,21 @@ struct CreateAccountView: View {
     }
     
     private func signUp() {
+        
         Task {
-            let userRequest = SignUpUserRequest(
-                first_name: name,
-                phone_number: phone,
-                email: email,
-                password: password)
             do {
-                self.user = try await Loader().signUp(user: userRequest)
-            } catch let error {
+                try await Service.supabase.auth.signUp(
+                    email: email,
+                    password: password
+                )
+             
+//                let session = try await supabase.auth.signIn(
+//                  email: "test@test.ru",
+//                  password: "123456"
+//                )
+//                print(session)
+            }
+            catch {
                 print(error)
             }
         }

@@ -12,6 +12,9 @@
 		2E0E81632B6D3F93008F72EF /* TrackTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E81622B6D3F93008F72EF /* TrackTabBarView.swift */; };
 		2E0E81652B6D3FB1008F72EF /* HomeTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E81642B6D3FB1008F72EF /* HomeTabBarView.swift */; };
 		2E0E816A2B6D4997008F72EF /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E81692B6D4997008F72EF /* ServerError.swift */; };
+		2E1E9E682B720C30009142A3 /* RectangleProfileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */; };
+		2E1E9E6A2B720CC4009142A3 /* HorizontalScrollHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */; };
+		2E1E9E6D2B721A35009142A3 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E6C2B721A35009142A3 /* ChatView.swift */; };
 		2E76184C2B6B5C93004F3219 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76184B2B6B5C93004F3219 /* InputFieldView.swift */; };
 		2E76184E2B6B5C95004F3219 /* LargeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76184D2B6B5C95004F3219 /* LargeButtonStyle.swift */; };
 		2E7618512B6B5E86004F3219 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7618502B6B5E86004F3219 /* TabBar.swift */; };
@@ -24,6 +27,13 @@
 		2E86AB692B6E0767007F1C8B /* EyeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */; };
 		2E8E09102B6A3A4F001BF6A7 /* OnboardingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */; };
 		2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */; };
+		2E918E032B7347BA006604BC /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E022B7347BA006604BC /* Auth */; };
+		2E918E052B7347BA006604BC /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E042B7347BA006604BC /* Functions */; };
+		2E918E072B7347BA006604BC /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E062B7347BA006604BC /* PostgREST */; };
+		2E918E092B7347BA006604BC /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E082B7347BA006604BC /* Realtime */; };
+		2E918E0B2B7347BA006604BC /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E0A2B7347BA006604BC /* Storage */; };
+		2E918E0E2B734A41006604BC /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E0D2B734A41006604BC /* Supabase */; };
+		2E918E102B7350B3006604BC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E918E0F2B7350B3006604BC /* Service.swift */; };
 		2EA546D82B6E4D62009EADD6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA546D72B6E4D62009EADD6 /* ProfileView.swift */; };
 		2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */; };
 		2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9F2B31BF1200121DBC /* ContentView.swift */; };
@@ -53,6 +63,9 @@
 		2E0E81622B6D3F93008F72EF /* TrackTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTabBarView.swift; sourceTree = "<group>"; };
 		2E0E81642B6D3FB1008F72EF /* HomeTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarView.swift; sourceTree = "<group>"; };
 		2E0E81692B6D4997008F72EF /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleProfileHomeView.swift; sourceTree = "<group>"; };
+		2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollHomeView.swift; sourceTree = "<group>"; };
+		2E1E9E6C2B721A35009142A3 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		2E76184B2B6B5C93004F3219 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		2E76184D2B6B5C95004F3219 /* LargeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonStyle.swift; sourceTree = "<group>"; };
 		2E7618502B6B5E86004F3219 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -65,6 +78,7 @@
 		2E86AB682B6E0767007F1C8B /* EyeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButtonView.swift; sourceTree = "<group>"; };
 		2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView2.swift; sourceTree = "<group>"; };
 		2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView3.swift; sourceTree = "<group>"; };
+		2E918E0F2B7350B3006604BC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2EA546D72B6E4D62009EADD6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2EB63B9A2B31BF1200121DBC /* testTaskJuniorDevSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTaskJuniorDevSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTaskJuniorDevSwiftApp.swift; sourceTree = "<group>"; };
@@ -94,6 +108,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E918E072B7347BA006604BC /* PostgREST in Frameworks */,
+				2E918E052B7347BA006604BC /* Functions in Frameworks */,
+				2E918E0E2B734A41006604BC /* Supabase in Frameworks */,
+				2E918E032B7347BA006604BC /* Auth in Frameworks */,
+				2E918E0B2B7347BA006604BC /* Storage in Frameworks */,
+				2E918E092B7347BA006604BC /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,12 +123,30 @@
 		2E0E81662B6D3FBE008F72EF /* TabBarViews */ = {
 			isa = PBXGroup;
 			children = (
+				2E1E9E6B2B721A0A009142A3 /* Chat */,
 				2E0E815E2B6D3C47008F72EF /* ProfileTabBarView.swift */,
 				2E0E81602B6D3ECE008F72EF /* WalletTabBarView.swift */,
 				2E0E81622B6D3F93008F72EF /* TrackTabBarView.swift */,
 				2E0E81642B6D3FB1008F72EF /* HomeTabBarView.swift */,
 			);
 			path = TabBarViews;
+			sourceTree = "<group>";
+		};
+		2E1E9E662B720C1B009142A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */,
+				2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E1E9E6B2B721A0A009142A3 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E9E6C2B721A35009142A3 /* ChatView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		2E7618482B6B5BC7004F3219 /* Onboarding */ = {
@@ -124,8 +162,8 @@
 		2E76184F2B6B5E6D004F3219 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				2E85B4152B70CD1700E33425 /* Wallet */,
 				2E7618502B6B5E86004F3219 /* TabBar.swift */,
+				2E85B4152B70CD1700E33425 /* Wallet */,
 				2E0E81662B6D3FBE008F72EF /* TabBarViews */,
 			);
 			path = TabBar;
@@ -177,6 +215,7 @@
 		2E86AB662B6E0719007F1C8B /* AnyHelpViews */ = {
 			isa = PBXGroup;
 			children = (
+				2E1E9E662B720C1B009142A3 /* Views */,
 				2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */,
 				2E86AB6A2B6E07BF007F1C8B /* Fields */,
 				2E86AB672B6E074A007F1C8B /* Buttons */,
@@ -201,12 +240,20 @@
 			path = Fields;
 			sourceTree = "<group>";
 		};
+		2E918E0C2B734A41006604BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2EB63B912B31BF1200121DBC = {
 			isa = PBXGroup;
 			children = (
 				ACEA9D352B6E3AA20046ADE2 /* server.py */,
 				2EB63B9C2B31BF1200121DBC /* testTaskJuniorDevSwift */,
 				2EB63B9B2B31BF1200121DBC /* Products */,
+				2E918E0C2B734A41006604BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,6 +277,7 @@
 				2E7618482B6B5BC7004F3219 /* Onboarding */,
 				2EB63BA12B31BF1500121DBC /* Assets.xcassets */,
 				2EB63BA32B31BF1500121DBC /* Preview Content */,
+				2E918E0F2B7350B3006604BC /* Service.swift */,
 			);
 			path = testTaskJuniorDevSwift;
 			sourceTree = "<group>";
@@ -289,6 +337,14 @@
 			dependencies = (
 			);
 			name = testTaskJuniorDevSwift;
+			packageProductDependencies = (
+				2E918E022B7347BA006604BC /* Auth */,
+				2E918E042B7347BA006604BC /* Functions */,
+				2E918E062B7347BA006604BC /* PostgREST */,
+				2E918E082B7347BA006604BC /* Realtime */,
+				2E918E0A2B7347BA006604BC /* Storage */,
+				2E918E0D2B734A41006604BC /* Supabase */,
+			);
 			productName = testTaskJuniorDevSwift;
 			productReference = 2EB63B9A2B31BF1200121DBC /* testTaskJuniorDevSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -317,6 +373,9 @@
 				Base,
 			);
 			mainGroup = 2EB63B912B31BF1200121DBC;
+			packageReferences = (
+				2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 2EB63B9B2B31BF1200121DBC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +409,7 @@
 				2E0E815F2B6D3C47008F72EF /* ProfileTabBarView.swift in Sources */,
 				2E76184E2B6B5C95004F3219 /* LargeButtonStyle.swift in Sources */,
 				2E7E87AB2B6CFDAC008D45A8 /* RectangleProfileView.swift in Sources */,
+				2E1E9E6D2B721A35009142A3 /* ChatView.swift in Sources */,
 				2E0E816A2B6D4997008F72EF /* ServerError.swift in Sources */,
 				AC7411DA2B6CECA8000D7AE4 /* Types.swift in Sources */,
 				2E7618542B6B63F8004F3219 /* LogInView.swift in Sources */,
@@ -357,8 +417,10 @@
 				2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */,
 				2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */,
 				2E0E81652B6D3FB1008F72EF /* HomeTabBarView.swift in Sources */,
+				2E918E102B7350B3006604BC /* Service.swift in Sources */,
 				2E0E81612B6D3ECE008F72EF /* WalletTabBarView.swift in Sources */,
 				2E86AB692B6E0767007F1C8B /* EyeButtonView.swift in Sources */,
+				2E1E9E682B720C30009142A3 /* RectangleProfileHomeView.swift in Sources */,
 				2E85B4142B70C22900E33425 /* HomeRectangleView.swift in Sources */,
 				AC7411DE2B6CECFE000D7AE4 /* Loader.swift in Sources */,
 				2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */,
@@ -378,6 +440,7 @@
 				2EC6B33B2B6B6F4E00C98421 /* ForgotPasswordView.swift in Sources */,
 				AC7411D72B6CE8B0000D7AE4 /* OTPModifier.swift in Sources */,
 				2E7618512B6B5E86004F3219 /* TabBar.swift in Sources */,
+				2E1E9E6A2B720CC4009142A3 /* HorizontalScrollHomeView.swift in Sources */,
 				AC7411E92B6D1AFD000D7AE4 /* TermsAndConditionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +647,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E918E022B7347BA006604BC /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		2E918E042B7347BA006604BC /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		2E918E062B7347BA006604BC /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		2E918E082B7347BA006604BC /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		2E918E0A2B7347BA006604BC /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		2E918E0D2B734A41006604BC /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E918E012B7347BA006604BC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2EB63B922B31BF1200121DBC /* Project object */;
 }

@@ -11,7 +11,7 @@ struct HomeTabBarView: View {
     @State var user: User
     var body: some View {
         VStack{
-            Rectangle()
+            RectangleProfileHomeView()
                 .overlay (
                     HStack {
                         if #available(iOS 15.0, *), let url = user.avatarUrl {
@@ -32,23 +32,21 @@ struct HomeTabBarView: View {
                                 .font(.caption2)
                                 .foregroundColor(Color("gray1"))
                         }
-                
-//                        Circle()
-//                            .foregroundColor(Color("circleColor"))
-//                            .position(CGPoint(x: 35.0, y: 120.0))
-//                            .frame(height: 122)
-//                        Circle()
-//                            .foregroundColor(Color("circleColor"))
-//                            .position(CGPoint(x: 160.0, y: 20.0))
-//                            .frame(height: 122)
                     }
                 )
                 .cornerRadius(10)
                 .clipped()
             .foregroundColor(Color("MainColor"))
-            .frame(height: 91)
-            .padding(.horizontal)
+            .frame(height: 91)            
             
+            VStack(){
+                HStack {
+                    Text("Special for you")
+                    
+                        .foregroundColor(.orange)
+                }
+                HorizontalScrollHomeView(image1: "ad1", image2: "ad2", image3: "ad1", image4: "ad2")
+            }
             
             Text("What would you like to do")
             
