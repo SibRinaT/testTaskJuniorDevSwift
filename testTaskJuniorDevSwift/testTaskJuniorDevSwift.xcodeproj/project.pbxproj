@@ -34,6 +34,8 @@
 		2E918E0B2B7347BA006604BC /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E0A2B7347BA006604BC /* Storage */; };
 		2E918E0E2B734A41006604BC /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2E918E0D2B734A41006604BC /* Supabase */; };
 		2E918E102B7350B3006604BC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E918E0F2B7350B3006604BC /* Service.swift */; };
+		2E918E122B736C15006604BC /* SendFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E918E112B736C15006604BC /* SendFieldView.swift */; };
+		2E918E152B7370B0006604BC /* SendPackageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E918E142B7370B0006604BC /* SendPackageView.swift */; };
 		2EA546D82B6E4D62009EADD6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA546D72B6E4D62009EADD6 /* ProfileView.swift */; };
 		2EB63B9E2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */; };
 		2EB63BA02B31BF1200121DBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB63B9F2B31BF1200121DBC /* ContentView.swift */; };
@@ -79,6 +81,8 @@
 		2E8E090F2B6A3A4F001BF6A7 /* OnboardingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView2.swift; sourceTree = "<group>"; };
 		2E8E09112B6A3D44001BF6A7 /* OnboardingView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView3.swift; sourceTree = "<group>"; };
 		2E918E0F2B7350B3006604BC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2E918E112B736C15006604BC /* SendFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFieldView.swift; sourceTree = "<group>"; };
+		2E918E142B7370B0006604BC /* SendPackageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPackageView.swift; sourceTree = "<group>"; };
 		2EA546D72B6E4D62009EADD6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2EB63B9A2B31BF1200121DBC /* testTaskJuniorDevSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTaskJuniorDevSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB63B9D2B31BF1200121DBC /* testTaskJuniorDevSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTaskJuniorDevSwiftApp.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		2E76184F2B6B5E6D004F3219 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				2E918E132B737074006604BC /* SendPackageViews */,
 				2E7618502B6B5E86004F3219 /* TabBar.swift */,
 				2E85B4152B70CD1700E33425 /* Wallet */,
 				2E0E81662B6D3FBE008F72EF /* TabBarViews */,
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				2E76184B2B6B5C93004F3219 /* InputFieldView.swift */,
+				2E918E112B736C15006604BC /* SendFieldView.swift */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -245,6 +251,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E918E132B737074006604BC /* SendPackageViews */ = {
+			isa = PBXGroup;
+			children = (
+				2E918E142B7370B0006604BC /* SendPackageView.swift */,
+			);
+			path = SendPackageViews;
 			sourceTree = "<group>";
 		};
 		2EB63B912B31BF1200121DBC = {
@@ -423,9 +437,11 @@
 				2E1E9E682B720C30009142A3 /* RectangleProfileHomeView.swift in Sources */,
 				2E85B4142B70C22900E33425 /* HomeRectangleView.swift in Sources */,
 				AC7411DE2B6CECFE000D7AE4 /* Loader.swift in Sources */,
+				2E918E152B7370B0006604BC /* SendPackageView.swift in Sources */,
 				2EC6B33D2B6B81E400C98421 /* VerificationOTPView.swift in Sources */,
 				2E85B4172B70CD3500E33425 /* AddPaymentMethodView.swift in Sources */,
 				2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */,
+				2E918E122B736C15006604BC /* SendFieldView.swift in Sources */,
 				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
 				AC7411E72B6D192B000D7AE4 /* CheckBox.swift in Sources */,
 				2EBB6C6E2B691C4E004796B2 /* SplashView.swift in Sources */,

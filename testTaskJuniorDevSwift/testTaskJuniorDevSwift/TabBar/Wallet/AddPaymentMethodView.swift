@@ -26,8 +26,6 @@ struct AddPaymentMethodView: View {
                         }
              
                     }
-     
-
                 )
         }
         .navigationTitle("Profile")
