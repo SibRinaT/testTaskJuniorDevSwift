@@ -86,19 +86,12 @@ struct CreateAccountView: View {
     }
     
     private func signUp() {
-        
         Task {
             do {
                 try await Service.supabase.auth.signUp(
                     email: email,
                     password: password
                 )
-             
-//                let session = try await supabase.auth.signIn(
-//                  email: "test@test.ru",
-//                  password: "123456"
-//                )
-//                print(session)
             }
             catch {
                 print(error)
