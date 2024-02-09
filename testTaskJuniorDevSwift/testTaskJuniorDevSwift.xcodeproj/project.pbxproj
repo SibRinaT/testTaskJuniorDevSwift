@@ -15,6 +15,7 @@
 		2E153EB62B74A9A60034B0C8 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EB52B74A9A60034B0C8 /* LoaderView.swift */; };
 		2E153EB92B74C10F0034B0C8 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EB82B74C10F0034B0C8 /* TrackView.swift */; };
 		2E153EBB2B75FB470034B0C8 /* ChatsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EBA2B75FB470034B0C8 /* ChatsMainView.swift */; };
+		2E153EBE2B76188B0034B0C8 /* MapCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EBD2B76188B0034B0C8 /* MapCheckBox.swift */; };
 		2E1E9E682B720C30009142A3 /* RectangleProfileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */; };
 		2E1E9E6A2B720CC4009142A3 /* HorizontalScrollHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */; };
 		2E1E9E6D2B721A35009142A3 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E6C2B721A35009142A3 /* ChatView.swift */; };
@@ -70,6 +71,7 @@
 		2E153EB52B74A9A60034B0C8 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		2E153EB82B74C10F0034B0C8 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		2E153EBA2B75FB470034B0C8 /* ChatsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsMainView.swift; sourceTree = "<group>"; };
+		2E153EBD2B76188B0034B0C8 /* MapCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCheckBox.swift; sourceTree = "<group>"; };
 		2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleProfileHomeView.swift; sourceTree = "<group>"; };
 		2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollHomeView.swift; sourceTree = "<group>"; };
 		2E1E9E6C2B721A35009142A3 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 				2E153EB82B74C10F0034B0C8 /* TrackView.swift */,
 			);
 			path = TrackViews;
+			sourceTree = "<group>";
+		};
+		2E153EBC2B76187A0034B0C8 /* CheckBoxes */ = {
+			isa = PBXGroup;
+			children = (
+				2E153EBD2B76188B0034B0C8 /* MapCheckBox.swift */,
+			);
+			path = CheckBoxes;
 			sourceTree = "<group>";
 		};
 		2E1E9E662B720C1B009142A3 /* Views */ = {
@@ -235,6 +245,7 @@
 		2E86AB662B6E0719007F1C8B /* AnyHelpViews */ = {
 			isa = PBXGroup;
 			children = (
+				2E153EBC2B76187A0034B0C8 /* CheckBoxes */,
 				2E1E9E662B720C1B009142A3 /* Views */,
 				2E86AB652B6DFF05007F1C8B /* TabBarHelpViews */,
 				2E86AB6A2B6E07BF007F1C8B /* Fields */,
@@ -457,6 +468,7 @@
 				2E85B4172B70CD3500E33425 /* AddPaymentMethodView.swift in Sources */,
 				2E7618562B6B6AFD004F3219 /* CreateAccountView.swift in Sources */,
 				2E918E122B736C15006604BC /* SendFieldView.swift in Sources */,
+				2E153EBE2B76188B0034B0C8 /* MapCheckBox.swift in Sources */,
 				2E153EB92B74C10F0034B0C8 /* TrackView.swift in Sources */,
 				2E8E09122B6A3D44001BF6A7 /* OnboardingView3.swift in Sources */,
 				AC7411E72B6D192B000D7AE4 /* CheckBox.swift in Sources */,

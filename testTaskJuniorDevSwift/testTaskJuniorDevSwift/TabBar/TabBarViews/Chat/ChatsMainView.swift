@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ChatsMainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ChatView(user: User.mockUser, userText: "ghjasddsa")
+        }
+        .navigationTitle("Chats")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
