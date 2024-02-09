@@ -13,7 +13,9 @@ struct TabBarView: View {
     
     var body: some View {
         TabView {
-            Text("Home")
+            NavigationView {
+                HomeTabBarView(user: user)
+            }
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
@@ -41,5 +43,7 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView(user: User.mockUser)
+    NavigationView {
+        TabBarView(user: User.mockUser)
+    }
 }

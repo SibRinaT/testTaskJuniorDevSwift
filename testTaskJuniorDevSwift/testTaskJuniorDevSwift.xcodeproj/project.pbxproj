@@ -14,6 +14,7 @@
 		2E0E816A2B6D4997008F72EF /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E81692B6D4997008F72EF /* ServerError.swift */; };
 		2E153EB62B74A9A60034B0C8 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EB52B74A9A60034B0C8 /* LoaderView.swift */; };
 		2E153EB92B74C10F0034B0C8 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EB82B74C10F0034B0C8 /* TrackView.swift */; };
+		2E153EBB2B75FB470034B0C8 /* ChatsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E153EBA2B75FB470034B0C8 /* ChatsMainView.swift */; };
 		2E1E9E682B720C30009142A3 /* RectangleProfileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */; };
 		2E1E9E6A2B720CC4009142A3 /* HorizontalScrollHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */; };
 		2E1E9E6D2B721A35009142A3 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E9E6C2B721A35009142A3 /* ChatView.swift */; };
@@ -68,6 +69,7 @@
 		2E0E81692B6D4997008F72EF /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		2E153EB52B74A9A60034B0C8 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		2E153EB82B74C10F0034B0C8 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		2E153EBA2B75FB470034B0C8 /* ChatsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsMainView.swift; sourceTree = "<group>"; };
 		2E1E9E672B720C30009142A3 /* RectangleProfileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleProfileHomeView.swift; sourceTree = "<group>"; };
 		2E1E9E692B720CC4009142A3 /* HorizontalScrollHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollHomeView.swift; sourceTree = "<group>"; };
 		2E1E9E6C2B721A35009142A3 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1E9E6C2B721A35009142A3 /* ChatView.swift */,
+				2E153EBA2B75FB470034B0C8 /* ChatsMainView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0C0E472B6CBF760075A057 /* OTPView15.swift in Sources */,
+				2E153EBB2B75FB470034B0C8 /* ChatsMainView.swift in Sources */,
 				2E85B4122B70A28B00E33425 /* ListElementHomeView.swift in Sources */,
 				2EBB6C722B692070004796B2 /* OnboardingView.swift in Sources */,
 				2E0E815F2B6D3C47008F72EF /* ProfileTabBarView.swift in Sources */,

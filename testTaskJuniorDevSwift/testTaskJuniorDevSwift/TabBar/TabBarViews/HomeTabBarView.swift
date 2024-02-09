@@ -51,14 +51,20 @@ struct HomeTabBarView: View {
             Text("What would you like to do")
             
             HStack {
-                HomeRectangleView(image: "customerIcon", title: "Customer Care", smallTitle: "Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today", grayColor: true)
-                HomeRectangleView(image: "boxIcon", title: "Send a package", smallTitle: "Request for a driver to pick up or deliver your package for you", grayColor: true)
+                NavigationLink (destination: ProfileView(user: user)){
+                        HomeRectangleView(image: "customerIcon", title: "Customer Care", smallTitle: "Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today")
+                }
+                                          
+                NavigationLink (destination: SendPackageView()) {
+                    HomeRectangleView(image: "boxIcon", title: "Send a package", smallTitle: "Request for a driver to pick up or deliver your package for you")
+                }
             }
             HStack {
-                    HomeRectangleView(image: "walletHomeIcon", title: "Fund your wallet", smallTitle: "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today", grayColor: true)
-                    HomeRectangleView(image: "chatIcon", title: "Chats", smallTitle: "Search for available rider within your area", grayColor: false)
-            }
-          
+                    HomeRectangleView(image: "walletHomeIcon", title: "Fund your wallet", smallTitle: "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today")
+                NavigationLink (destination: ChatsMainView()) {
+                    HomeRectangleView(image: "chatIcon", title: "Chats", smallTitle: "Search for available rider within your area")
+                }
+            }          
         }
     }
 }
