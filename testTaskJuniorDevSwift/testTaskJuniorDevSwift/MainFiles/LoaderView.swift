@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct LoaderView: View {
-    @State private var isRotating = 10.0
+    @State private var isRotating = false
     var body: some View {
         VStack {
             Image("load3")
+                .rotationEffect(.degrees(isRotating ? -360 : 0))
+                .animation(Animation.linear(duration: 2.5).repeatForever(autoreverses: false))
                 .onAppear {
-                            withAnimation(.linear(duration: 3)
-                                    .repeatForever(autoreverses: false)) {
-                                isRotating = 360.0
-                            }
+                    self.isRotating.toggle()
                 }
+            }
         }
     }
-    
-}
 
 #Preview {
     LoaderView()

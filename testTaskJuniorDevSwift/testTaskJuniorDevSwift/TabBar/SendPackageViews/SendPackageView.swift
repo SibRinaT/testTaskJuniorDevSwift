@@ -24,6 +24,7 @@ struct SendPackageView: View {
                 HStack {
                     Image("pointIcon")
                     Text("Origin Details")
+                        .alignmentGuide(.leading, computeValue: { _ in 0 }) // Выравнивание с левого края
                         .font(.title3)
                 }
                 SendFieldView(fieldValue: "", placeholder: "Address")
@@ -48,22 +49,26 @@ struct SendPackageView: View {
             }
             HStack {
                 Rectangle()
+                    .cornerRadius(5)
                     .shadow(radius: 2, x: 0, y: 2)
                     .overlay (
                         VStack {
                             Image("clockIcon")
-                            Text("asd")
+                            Text("Instant delivery")
+                                .foregroundColor(.white)
                         }
                         )
                     .frame(width: 159, height: 75)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("MainColor"))
                 
                 Rectangle()
+                    .cornerRadius(5)
                     .shadow(radius: 2, x: 0, y: 2)
                     .overlay (
                         VStack {
                             Image("calendarIcon")
-                            Text("asd")
+                            Text("Scheduled delivery")
+                                .foregroundColor(Color("gray2"))
                         }
                         )
                     .frame(width: 159, height: 75)
